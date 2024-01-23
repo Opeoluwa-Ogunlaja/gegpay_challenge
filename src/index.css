@@ -1,3 +1,32 @@
 :root {
+  /* Color */
+  --clr-primary: hsla(165, 59%, 50%, 1);
+  --clr-secondary: hsla(251, 76%, 10%, 1);
+
+  --clr-warning: hsl(49, 100%, 48%);
+  --clr-error: hsl(2, 82%, 62%);
+  --clr-success: hsl(133, 47%, 59%);
+
+  --clr-white: hsla(0, 100%, 100, 1);
+  --clr-neutral-bg: hsla(0, 0%, 99%, 1);
+
+  --clr-neutral-50: hsla(0, 0%, 98%, 1);
+  --clr-neutral-100: hsla(0, 0%, 96%, 1);
+  --clr-neutral-200: hsla(0, 0%, 90%, 1);
+  --clr-neutral-300: hsla(0, 0%, 83%, 1);
+  --clr-neutral-400: hsla(0, 0%, 64%, 1);
+  --clr-neutral-500: hsla(0, 0%, 45%, 1);
+  --clr-neutral-600: hsla(0, 0%, 32%, 1);
+  --clr-neutral-700: hsla(0, 0%, 25%, 1);
+  --clr-neutral-800: hsla(0, 0%, 15%, 1);
+  --clr-neutral-900: hsla(0, 0%, 9%, 1);
+
+  /* Typography */
+  --ff-base: "Plus Jakarta Sans", system-ui, sans-serif;
   
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /* Layout */
 }

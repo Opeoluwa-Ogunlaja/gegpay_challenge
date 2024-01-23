@@ -15,13 +15,13 @@ The design was created to the following widths:
 
 ### Accents
 
-- Warning: rgba(244, 199, 0, 1)
-- Error: rgba(237, 84, 78, 1)
-- Success: rgba(102, 200, 123, 1)
+- Warning: hsla(49, 100%, 48%, 1);
+- Error: hsla(2, 82%, 62%, 1)
+- Success: hsla(133, 47%, 59%, 1)
 
 ### Neutral
 
-- White: hsl(0, 100%, 100%)
+- White: hsla(0, 100%, 100, 1)
 - Background: hsla(0, 0%, 99%, 1)
 
 ## Typography
