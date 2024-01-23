@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { BoxIcon, InfoCircleIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon } from '../assets/icons';
+import { BoxIcon, CategoryIcon, DiscountIcon, InfoCircleIcon, LogoutIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon } from '../assets/icons';
 
 
 const sidenav_links = [
     {
         to: '/',
-        icon: BoxIcon,
+        icon: CategoryIcon,
         title: 'home'
     },
     {
@@ -21,7 +21,7 @@ const sidenav_links = [
     },
     {
         to: '/',
-        icon: InfoCircleIcon,
+        icon: DiscountIcon,
         title: 'home4'
     },
     {
@@ -41,7 +41,7 @@ const sidenav_links = [
     },
     {
         to: '/',
-        icon: Setting2Icon,
+        icon: LogoutIcon,
         title: 'home8'
     }
 ]
@@ -57,9 +57,9 @@ export const Sidenav = () => {
             <img src="/icons/logo.svg" alt="logo" />
             <h1 className="visually-hidden"></h1>
         </div>
-        <ul>
+        <ul className='flex flex-column items-center'>
             {sidenav_links.slice(0, -3).map((link, i) => {
-                return <li key={link.title} className='px-xs'>
+                return <li key={link.title} className='px-xs flex items-center'>
                     <a href={link.to}>
                     {   <Icon IconElement={link.icon}/>}
                         <span className='visually-hidden'>{link.title}</span>
@@ -68,7 +68,7 @@ export const Sidenav = () => {
             })}
             <div className='sidenav-bottom'>
                 {sidenav_links.slice(-3, -1).map((link, i) => {
-                    return <li key={link.title} className='px-xs'>
+                    return <li key={link.title} className='px-xs flex items-center'>
                         <a href={link.to}>
                             {<Icon IconElement={link.icon}/>}
                             <span className='visually-hidden'>{link.title}</span>
