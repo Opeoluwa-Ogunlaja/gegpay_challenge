@@ -172,6 +172,10 @@ main {
 .sidenav{
   grid-row: span 2;
   order: 1;
+  padding: var(--space-lg) var(--space-xs);
+}
+.sidenav-bottom{
+  margin-top: auto;
 }
 
 .topnav{
