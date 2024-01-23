@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Plus+Jakarta+Sans_400_normal.eot); /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NSw.eot */
+    src: local('☺'),
+        url(Plus+Jakarta+Sans_400_normal.eot?#iefix) format('embedded-opentype'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NSw.eot */
+        url(Plus+Jakarta+Sans_400_normal.woff2) format('woff2'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NTw.woff2 */
+        url(Plus+Jakarta+Sans_400_normal.woff) format('woff'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NSQ.woff */
+        url(Plus+Jakarta+Sans_400_normal.ttf) format('truetype'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NShXUEKmARA.ttf */
+        url(Plus+Jakarta+Sans_400_normal.svg#Plus+Jakarta+Sans_400_normal) format('svg'); /* http://fonts.gstatic.com/l/font?kit=LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NSA&skey=ca4b9e62a7d41df5&v=v8#PlusJakartaSans */
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url(Plus+Jakarta+Sans_500_normal.eot); /* {{embedded-opentype-gf-url}} */
+    src: local('☺'),
+        url(Plus+Jakarta+Sans_500_normal.eot?#iefix) format('embedded-opentype'), /* {{embedded-opentype-gf-url}} */
+        url(Plus+Jakarta+Sans_500_normal.woff2) format('woff2'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_m07NTw.woff2 */
+        url(Plus+Jakarta+Sans_500_normal.woff) format('woff'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_m07NSQ.woff */
+        url(Plus+Jakarta+Sans_500_normal.ttf) format('truetype'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_m07NShXUEKmARA.ttf */
+        url(Plus+Jakarta+Sans_500_normal.svg#Plus+Jakarta+Sans_500_normal) format('svg'); /* {{svg-gf-url}} */
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url(Plus+Jakarta+Sans_600_normal.eot); /* {{embedded-opentype-gf-url}} */
+    src: local('☺'),
+        url(Plus+Jakarta+Sans_600_normal.eot?#iefix) format('embedded-opentype'), /* {{embedded-opentype-gf-url}} */
+        url(Plus+Jakarta+Sans_600_normal.woff2) format('woff2'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_d0nNTw.woff2 */
+        url(Plus+Jakarta+Sans_600_normal.woff) format('woff'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_d0nNSQ.woff */
+        url(Plus+Jakarta+Sans_600_normal.ttf) format('truetype'), /* http://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_d0nNShXUEKmARA.ttf */
+        url(Plus+Jakarta+Sans_600_normal.svg#Plus+Jakarta+Sans_600_normal) format('svg'); /* {{svg-gf-url}} */
+}
