@@ -137,6 +137,10 @@ textarea {
   display: flex;
 }
 
+.flex-column{
+  flex-direction: column;
+}
+
 .items-center{
   align-items: center;
 }
@@ -172,8 +176,13 @@ main {
 .sidenav{
   grid-row: span 2;
   order: 1;
-  padding: var(--space-lg) var(--space-xs);
+  padding-block: var(--space-lg) var(--space-xs);
 }
+
+.px-xs{
+  padding-inline: var(--space-xs);
+}
+
 .sidenav-bottom{
   margin-top: auto;
 }

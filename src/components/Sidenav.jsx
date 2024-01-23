@@ -49,10 +49,13 @@ const sidenav_links = [
 export const Sidenav = () => {
   return (
     <aside className='sidenav'>
-        <div className='logo'></div>
+        <div className='logo px-xs'>
+            <img src="/icons/logo.svg" alt="logo" />
+            <h1 className="visually-hidden"></h1>
+        </div>
         <ul>
             {sidenav_links.slice(0, -3).map((link, i) => {
-                return <li key={link.title}>
+                return <li key={link.title} className='px-xs'>
                     <a href={link.to}>
                         <span className='visually-hidden'>{link.title}</span>
                     </a>
@@ -60,7 +63,7 @@ export const Sidenav = () => {
             })}
             <div className='sidenav-bottom'>
                 {sidenav_links.slice(-3, -1).map((link, i) => {
-                    return <li key={link.title}>
+                    return <li key={link.title} className='px-xs'>
                         <a href={link.to}>
                             <span className='visually-hidden'>{link.title}</span>
                         </a>
