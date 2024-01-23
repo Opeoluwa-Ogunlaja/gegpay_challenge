@@ -29,8 +29,6 @@ dist
 dist-ssr
 *.local
 
-Fraunces/
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
