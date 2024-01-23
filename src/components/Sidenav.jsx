@@ -46,10 +46,12 @@ const sidenav_links = [
     }
 ]
 
+// I go soon Make this icon element to seperate  component/file... Just dey rugged am
 const Icon = ({ IconElement }) => {
     return <IconElement />
 }
 
+// for this one the array of links are already there withb the icons associated with them. You can then use the Icon element to render the icon by passing it into the IconElement prop basically. Work no too dey
 export const Sidenav = () => {
   return (
     <aside className='sidenav'>
