@@ -3,9 +3,9 @@
   --clr-primary: hsla(165, 59%, 50%, 1);
   --clr-secondary: hsla(251, 76%, 10%, 1);
 
-  --clr-warning: hsl(49, 100%, 48%);
-  --clr-error: hsl(2, 82%, 62%);
-  --clr-success: hsl(133, 47%, 59%);
+  --clr-accent-warning: hsl(49, 100%, 48%);
+  --clr-accent-error: hsl(2, 82%, 62%);
+  --clr-accent-success: hsl(133, 47%, 59%);
 
   --clr-white: hsla(0, 100%, 100, 1);
   --clr-neutral-bg: hsla(0, 0%, 99%, 1);
@@ -49,5 +49,123 @@
   --leading-heading-1: 4.5rem /* 72px */;
 
   /* Layout */
-  
+  --space-xxs: 0.5rem; /* 8px */
+  --space-xs: 0.675rem; /* 10px */
+  --space-sm: 0.75rem; /* 12px */
+  --space-base: 1rem; /* 16px */
+  --space-lg: 1.25rem; /* 20px */
+  --space-xl: 2.875rem; /* 30px */
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+
+body {
+  line-height: var(--leading-norm);
+  font-size: var(--text-base);
+  font-family: var(--ff-base) !important;
+  font-weight: var(--font-norm);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  color: #0D062D;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: var(--clr-neutral-bg);
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 12rem);
+  padding: var(--space-normal);
+  grid-template-columns: 17.125rem 1fr;
+  background-color: white;
+  border-radius: var(--rounded-small);
+  grid-auto-rows: 1fr;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  shape-margin: 0.75rem;
+  font-style: italics;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+textarea {
+  cursor: text;
+}
+
+
+/* Utiities */
+.grid{
+  display: grid;
+}
+
+.flex{
+  display: flex;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.visually-hidden {
+  clip: rect(10%);
+  clip-path: inset(100%);
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.hidden{
+  visibility: hidden;
+  pointer-events: none;
 }
