@@ -1,0 +1,67 @@
+/* Topnav stuff */
+.topnav{
+    order: 2;
+    background-color: var(--clr-neutral-50);
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--clr-neutral-150);
+    overflow-x: scroll;
+  }
+  
+  .topnav .topnav_left p{
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+  }
+
+
+  .topnav_right > .search_bar > div input{
+    height: 48px;
+    /* width: 350px; */
+    padding-right: 45px;
+    background-color: var(--clr-white);
+    border: 1px solid var(--clr-neutral-150);
+    border-radius: 20px;    
+  }
+
+  .search_bar > div{
+    position: relative;
+  }
+  .search_bar > div > img{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+  
+  
+  .calendar_and_notification > .topnav_calender{
+    gap: var(--space-xs);
+    height: 40px;
+    padding-block: var(--space-sm);
+    padding-inline: var(--space-base);
+    background-color: transparent;
+    transition: all .3s;
+  }
+
+  .calendar_and_notification > .topnav_notification{
+    height: 40px;
+    border: 1px solid var(--clr-neutral-150);
+    border-radius: 100%;
+    transition: all .3s;
+  }
+  .topnav_calender:hover, .topnav_notification:hover{
+    background-color: white;
+  }
+  
+  .topnav_right .profile_menu > .profile_container{
+    gap: var(--space-sm);
+    padding: 6px var(--space-xxs);
+    border: 1px solid var(--clr-neutral-150);
+    border-radius: 28px;
+  }
+  .profile_container .name_and_email{
+    gap: 4px;
+  }
+  .name_and_email p{
+    font-size: var(--text-sm);
+    color: var(--clr-neutral-500);
+  }
+  

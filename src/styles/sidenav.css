@@ -1,0 +1,30 @@
+/* Sidevav */
+.sidenav{
+    grid-row: span 2;
+    order: 1;
+    padding-block: var(--space-lg);
+    height: auto;
+    border-right: 1px solid var(--clr-neutral-150);
+    background-color: inherit;
+  }
+  
+  .sidenav-bottom{
+    margin-top: auto;
+    height: auto;
+  }
+  
+  .sidenav ul >li > a{
+    padding: var(--space-xs) 0;
+    width: 100%;
+    position: relative;
+  }
+
+  .sidenav a.active-link::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    border-radius: 8px 0 0 8px;
+    height: 30px;
+    right: 0;
+    top: 8px;
+  }
