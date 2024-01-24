@@ -1,0 +1,31 @@
+@import url('/src/index.css');
+
+.sidenav{
+    background-color: hsla(220, 23%, 97%, 1);
+    min-width: 80px;
+}
+
+.sidenav ul >li > a{
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+}
+.sidenav ul{
+    width: 100%;
+}
+.sidenav ul > li{
+    width: 100%;
+}
+.sidenav .sidenav-top, .sidenav .sidenav-bottom{
+    width: 100%;
+}
+a.active-link::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    border-radius: 8px 0 0 8px;
+    height: 30px;
+    background-color: black;
+    right: 0;
+    top: 8px;
+}

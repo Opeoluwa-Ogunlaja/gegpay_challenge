@@ -12,6 +12,7 @@
 
   --clr-neutral-50: hsla(0, 0%, 98%, 1);
   --clr-neutral-100: hsla(0, 0%, 96%, 1);
+  --clr-neutral-150: hsla(0, 0%, 92%, 1);
   --clr-neutral-200: hsla(0, 0%, 90%, 1);
   --clr-neutral-300: hsla(0, 0%, 83%, 1);
   --clr-neutral-400: hsla(0, 0%, 64%, 1);
@@ -148,6 +149,9 @@ textarea {
 .justify-between{
   justify-content: space-between;
 }
+.justify-center{
+  justify-content: center;
+}
 
 .visually-hidden {
   clip: rect(10%);
@@ -183,12 +187,17 @@ main {
 .sidenav{
   grid-row: span 2;
   order: 1;
-  padding-block: var(--space-lg) var(--space-xs);
+  padding: 20px 0;
+  margin: 0;
   height: auto;
+  border-right: 1px solid var(--clr-neutral-150);
 }
 
 .px-xs{
   padding-inline: var(--space-xs);
+}
+.px-lg{
+  padding: var(--space-lg);
 }
 
 .sidenav-bottom{
@@ -198,4 +207,7 @@ main {
 
 .topnav{
   order: 2;
+}
+.gap-20{
+  gap: 20px;
 }
