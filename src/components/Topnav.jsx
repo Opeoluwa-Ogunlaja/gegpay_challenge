@@ -13,7 +13,7 @@ export const Topnav = () => {
   return (
     <header className='topnav'>
         <div className='topnav_left'>
-          <p>Dashboard</p>
+          <p className='leading-heading-1'>Dashboard</p>
         </div>
 
         <div className='topnav_right'>

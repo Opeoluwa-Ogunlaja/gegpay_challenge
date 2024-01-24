@@ -22,7 +22,7 @@ const sidenav_links = [
     {
         to: '/',
         icon: BoxIcon,
-        title: 'hom3'
+        title: 'home3'
     },
     {
         to: '/',
