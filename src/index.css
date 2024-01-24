@@ -354,7 +354,7 @@ textarea {
   background-color: inherit;
 }
 
-.wrapper > div{
+.wrapper > main{
   grid-template-columns: 62.5% 37.5%;
   grid-auto-rows: 1fr;
 }
@@ -400,7 +400,7 @@ section.stat-cards{
 }
 
 @container wrapper (width < 1080px){
-  .wrapper > div{
+  .wrapper > main{
     grid-template-areas: 
       'trends cards'
       'orders cards'
@@ -414,7 +414,7 @@ section.stat-cards{
 }
 
 @container wrapper (width < 562px){
-  .wrapper > div{
+  .wrapper > main{
     grid-template-areas: 
       'trends'
       'cards'
