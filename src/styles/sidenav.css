@@ -5,7 +5,7 @@
     padding-block: var(--space-lg);
     height: auto;
     border-right: 1px solid var(--clr-neutral-150);
-    background-color: inherit;
+    background-color: var(--clr-neutral-bg);
   }
   
   .sidenav-bottom{
