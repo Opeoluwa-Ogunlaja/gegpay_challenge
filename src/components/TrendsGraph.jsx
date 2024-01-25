@@ -29,7 +29,7 @@ const data = {
   datasets: [{
     barPercentage: 0.5,
     barThickness: 30,
-    data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56],
+    data: [5300, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000, 26000],
     backgroundColor: 'hsla(165, 59%, 50%, .1)',
     borderWidth: 0,
     borderRadius: 9999,

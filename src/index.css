@@ -235,24 +235,26 @@ textarea {
   order: 3;
   /* inline-size: 100%; */
   container: wrapper / inline-size;
-  padding-inline: var(--space-lg);
-  padding-top: var(--space-lg);
+  
   background-color: inherit;
 }
 
 .wrapper > main{
   grid-template-columns: 62.5% 37.5%;
   grid-auto-rows: 1fr;
+  padding: var(--space-lg);
 }
 
 .wrapper section{
   padding: var(--space-lg);
   background-color: var(--clr-white);
   grid-area: unset;
+  border-radius: var(--space-base);
+  border: 1px solid var(--clr-neutral-150);
 }
 
 section.trends{
-
+  max-height: 380px;
 }
 
 section.orders{
