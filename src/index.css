@@ -253,6 +253,10 @@ textarea {
   margin-bottom: var(--space-sm);
 }
 
+.leading-norm{
+  line-height: var(--leading-norm);
+}
+
 .leading-heading-1 {
   line-height: var(--leading-heading-1);
 }
@@ -338,7 +342,7 @@ textarea {
 }
 
 section.trends {
-  max-height: 380px;
+ 
 }
 
 section.orders {}

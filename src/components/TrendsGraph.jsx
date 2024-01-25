@@ -8,8 +8,8 @@ import {
   Title,
   Tooltip,
   Legend,
-  BarElement
-} from 'chart.js'
+  BarElement,
+} from "chart.js";
 
 ChartJS.register(
   CategoryScale,
@@ -20,42 +20,73 @@ ChartJS.register(
   Tooltip,
   Legend,
   BarElement
-)
+);
+
+ChartJS.defaults.font = {
+  size: 14,
+  family: "Plus Jakarta sans",
+};
 
 import { Chart } from "react-chartjs-2";
 
 const data = {
-  labels: ['Jan', 'Feb', "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-  datasets: [{
-    barPercentage: 0.5,
-    barThickness: 30,
-    data: [5300, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000, 26000],
-    backgroundColor: 'hsla(165, 59%, 50%, .1)',
-    borderWidth: 0,
-    borderRadius: 9999,
-    hoverBackgroundColor: 'hsla(165, 59%, 50%, 1)'
-  }]
+  datasets: [
+    {
+      barPercentage: 0.5,
+      barThickness: 30,
+      data: [
+        5300, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000,
+        26000,
+      ],
+      backgroundColor: "hsla(165, 59%, 50%, .1)",
+      borderWidth: 0,
+      borderRadius: 9999,
+      hoverBackgroundColor: "hsla(165, 59%, 50%, 1)",
+    },
+  ],
 };
 
 const options = {
   scales: {
+    x: {
+      type: "category",
+      labels: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
+    },
     y: {
-      beginAtZero: true
-    }
+      beginAtZero: true,
+      labels: [5000, 10000, 20000, 30000, 40000, 50000],
+      suggestedMin: 5000,
+      suggestedMax: 50000,
+    },
   },
   plugins: {
     tooltip: {
-      yAlign: 'bottom',
-      callbacks : {
-        label: () => ''
-      }
+      yAlign: "bottom",
+      displayColors: false,
+      beforeLabel: null,
+      callbacks: {
+        title: () => "",
+        label: ({ formattedValue }) => '$' + formattedValue
+      },
     },
     legend: {
-      display: false
-    }
-  }
+      display: false,
+    },
+  },
 };
-
 
 export const TrendsGraph = () => {
   return (
@@ -67,7 +98,7 @@ export const TrendsGraph = () => {
           <button>Weekly</button>
         </div>
       </div>
-      <Chart options={options} data={data} type={'bar'}/>
+      <Chart options={options} data={data} type={"bar"} />
     </section>
   );
 };
