@@ -368,7 +368,7 @@ section.platform {}
   width: var(--slider-width);
   border-radius: inherit;
   transform-origin: left;
-  animation: slide-out 1s ease-in;
+  animation: slide-out 1s ease-in-out;
   transition: transform 1s ease-in-out;
 }
 

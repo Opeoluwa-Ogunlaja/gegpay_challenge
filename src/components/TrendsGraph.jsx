@@ -23,21 +23,33 @@ ChartJS.register(
 );
 
 ChartJS.defaults.font = {
-  size: 14,
+  size: 16,
   family: "Plus Jakarta sans",
 };
 
 import { Chart } from "react-chartjs-2";
 
+const points = [
+  5300, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000, 26000,
+];
+
+const maxNum = (arr) => {
+  if (arr.length <= 0) return null;
+
+  var max = arr[0];
+
+  for (let item of arr.slice(1, -1)) {
+    if (item > max) max = item;
+  }
+
+  return max;
+};
+
 const data = {
   datasets: [
     {
-      barPercentage: 0.5,
       barThickness: 30,
-      data: [
-        5300, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000,
-        26000,
-      ],
+      data: points,
       backgroundColor: "hsla(165, 59%, 50%, .1)",
       borderWidth: 0,
       borderRadius: 9999,
@@ -64,12 +76,14 @@ const options = {
         "Nov",
         "Dec",
       ],
+      grid: {
+        display: false,
+      },
     },
     y: {
       beginAtZero: true,
-      labels: [5000, 10000, 20000, 30000, 40000, 50000],
-      suggestedMin: 5000,
-      suggestedMax: 50000,
+      min: 0,
+      max: maxNum(points) + 5000,
     },
   },
   plugins: {
@@ -79,7 +93,7 @@ const options = {
       beforeLabel: null,
       callbacks: {
         title: () => "",
-        label: ({ formattedValue }) => '$' + formattedValue
+        label: ({ formattedValue }) => "$" + formattedValue,
       },
     },
     legend: {
