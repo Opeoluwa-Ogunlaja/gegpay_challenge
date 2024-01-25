@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { numberFormat } from '../utils/numberFormat'
 
 export const PlatformElement = ({ data }) => {
   const platformSliderRef = useRef(null)
@@ -18,8 +19,8 @@ export const PlatformElement = ({ data }) => {
             height: data?.height || 12
           }}></div>
           <div className='justify-between items-center flex'>
-            <span>${data.value || undefined}</span>
-            <span>{data.increase || undefined}%</span>
+            <span>${numberFormat(data.value) || undefined}</span>
+            <span>+{data.increase || undefined}%</span>
           </div>
         </div>
     </div>

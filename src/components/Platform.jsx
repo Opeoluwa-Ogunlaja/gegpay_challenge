@@ -4,19 +4,27 @@ import { PlatformElement } from "./PlatformElement";
 const platforms = [
   {
     title: "Book Bazaar",
-    color: 'purple'
+    color: 'blue',
+    value: 2500000,
+    increase: 15
   },
   {
     title: "Artisan Aisle",
-    color: 'purple'
+    color: 'cyan',
+    value: 1800000,
+    increase: 10
   },
   {
     title: "Toy Troop",
-    color: 'purple'
+    color: 'yellow',
+    value: 1200000,
+    increase: 8
   },
   {
     title: "XStore",
-    color: 'purple'
+    color: 'red',
+    value: 1000000,
+    increase: 5
   },
 ];
 
