@@ -56,12 +56,12 @@ const sidenav_links = [
 export const Sidenav = () => {
   return (
     <aside className='sidenav flex flex-column items-center'>
-        <div className="sidenav-top flex flex-column items-center gap-20">
+        <div className="sidenav-top flex flex-column items-center gap-lg">
             <div className='logo px-xs'>
                 <img src="/icons/logo.svg" alt="logo" />
                 <h1 className="visually-hidden"></h1>
             </div>
-            <ul className='flex flex-column items-center gap-20'>
+            <ul className='flex flex-column items-center gap-lg'>
                 {sidenav_links.slice(0, -3).map((link, i) => {
                     return <li key={link.title}>
                         <a href={link.to} className='px-xs flex items-center justify-center'>
@@ -77,7 +77,7 @@ export const Sidenav = () => {
                 </label>
             </div>
         </div>
-        <ul className='sidenav-bottom flex flex-column items-center gap-20'>
+        <ul className='sidenav-bottom flex flex-column items-center gap-lg'>
             {sidenav_links.slice(6, -1).map((link, i) => {
                 return <li key={link.title} >
                     <a href={link.to} className='px-xs flex items-center justify-center'>

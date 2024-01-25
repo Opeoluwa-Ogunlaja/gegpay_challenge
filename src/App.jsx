@@ -14,7 +14,7 @@ function App() {
     <Topnav />
     <Sidenav />
     <div className='wrapper grid'>
-      <main className='grid gap-20'>
+      <main className='grid gap-lg'>
         <TrendsGraph />
         <StatsCards />
         <Orders />
