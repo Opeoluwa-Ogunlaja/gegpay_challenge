@@ -1,11 +1,7 @@
 import React from 'react';
-import User1 from '../assets/images/user1.svg'
-import User2 from '../assets/images/user2.svg'
-import User3 from '../assets/images/user3.svg'
-import User4 from '../assets/images/user4.svg'
-import User5 from '../assets/images/user5.svg'
-
-import FileDownload from '../assets/icons/file-download.svg'
+import { User1, User2, User3, User4, User5 } from '../assets/images';
+import { FileDownload } from '../assets/icons';
+import { Icon } from './Icon';
 
 const dummyData = [
   {
@@ -59,9 +55,9 @@ const dummyData = [
 export const Orders = () => {
   return (
     <section className='orders'>
-      <div className='section-header'>
-        <b>Last Orders</b>
-        <a href="">See All</a>
+      <div className='flex justify-between items-center'>
+        <h3 className='font-semibold section-header'>Last Orders</h3>
+        <a href="" className='section-header'>See All</a>
       </div>
       <div className="last-orders-table">
         <table>
@@ -76,8 +72,8 @@ export const Orders = () => {
           </thead>
           <tbody>
             {dummyData.map((item) => {
-              <tr key={item.id}>
-                <td>{item.dp} {item.fullName}</td>
+              return <tr key={item.id}>
+                <td><Icon IconElement={item.dp}/> {item.fullName}</td>
                 <td>{item.date}</td>
                 <td>{item.amount}</td>
                 <td>{item.status}</td>

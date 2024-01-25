@@ -61,7 +61,7 @@ export const TrendsGraph = () => {
   return (
     <section className="trends">
       <div className="flex items-center justify-between">
-        <h2 className="section-header">Sales Trends</h2>
+        <h2 className="section-header font-semibold">Sales Trends</h2>
         <div className="flex items-center">
           <h4>Sort by: </h4>
           <button>Weekly</button>

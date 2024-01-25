@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ArrowRightIcon, BoxIcon, CategoryIcon, DiscountIcon, InfoCircleIcon, LogoutIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon } from '../assets/icons';
+import { Icon } from './Icon';
 // import Toggle from './toggle_mode_switch';
 
 const sidenav_links = [
@@ -50,11 +51,6 @@ const sidenav_links = [
         title: 'home8'
     }
 ]
-
-// I go soon Make this icon element to seperate  component/file... Just dey rugged am
-const Icon = ({ IconElement }) => {
-    return <IconElement />
-}
 
 // for this one the array of links are already there withb the icons associated with them. You can then use the Icon element to render the icon by passing it into the IconElement prop basically. Work no too dey
 export const Sidenav = () => {

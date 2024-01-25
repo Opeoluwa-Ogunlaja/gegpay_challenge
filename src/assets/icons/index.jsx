@@ -9,5 +9,6 @@ import MoonIcon from './moon.svg?react'
 import Profile2UserIcon from './profile-2user.svg?react'
 import Setting2Icon from './setting-2.svg?react'
 import TrendUpIcon from './trend-up.svg?react'
+import FileDownload from './file-download.svg?react'
 
-export { CategoryIcon, ArrowRightIcon, BoxIcon, DiscountIcon, InfoCircleIcon, LightIcon, LogoutIcon, MoonIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon }
+export { CategoryIcon, ArrowRightIcon, BoxIcon, DiscountIcon, InfoCircleIcon, LightIcon, LogoutIcon, MoonIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon, FileDownload }

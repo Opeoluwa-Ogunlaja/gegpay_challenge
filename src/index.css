@@ -92,6 +92,17 @@ body {
   background-color: var(--clr-neutral-bg);
 }
 
+table{
+  display: table;
+  width: max-content;
+  overflow-x: scroll;
+}
+
+th, td, tr{
+  text-align: start;
+  color: inherit;
+}
+
 button,
 input,
 textarea {
@@ -121,7 +132,7 @@ ol {
 a {
   font: inherit;
   text-decoration: none;
-  color: inherit;
+  color: var(--clr-primary);
 }
 
 input,
@@ -200,8 +211,24 @@ textarea {
   line-height: var(--leading-heading-5);
 }
 
+.text-primary{
+  color: var(--clr-primary);
+}
+
 .gap-20{
   gap: 20px;
+}
+
+.font-medium{
+  font-weight: var(--font-medium);
+}
+
+.font-regular{
+  font-weight: var(--font-regular);
+}
+
+.font-semibold{
+  font-weight: var(--font-semibold);
 }
 
 .cursor-pointer{
@@ -218,8 +245,7 @@ textarea {
 
 .section-header{
   font-size: var(--text-lg);
-  line-height: var(--leading-heading-2);
-  font-weight: var(--font-semibold);
+  line-height: var(--leading-heading-3);
 }
 
 .main-container {
