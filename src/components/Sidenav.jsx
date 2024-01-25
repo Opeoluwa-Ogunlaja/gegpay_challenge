@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BoxIcon, CategoryIcon, DiscountIcon, InfoCircleIcon, LogoutIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon } from '../assets/icons';
+import { ArrowRightIcon, BoxIcon, CategoryIcon, DiscountIcon, InfoCircleIcon, LogoutIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon } from '../assets/icons';
 // import Toggle from './toggle_mode_switch';
 
 const sidenav_links = [
@@ -17,7 +17,7 @@ const sidenav_links = [
     {
         to: '/',
         icon: Profile2UserIcon,
-        title: 'hom3'
+        title: 'hom333'
     },
     {
         to: '/',
@@ -36,7 +36,7 @@ const sidenav_links = [
     },
     {
         to: '/',
-        icon: Setting2Icon,
+        icon: ArrowRightIcon,
         title: 'home6'
     },
     {
@@ -82,7 +82,7 @@ export const Sidenav = () => {
             </div>
         </div>
         <ul className='sidenav-bottom flex flex-column items-center gap-20'>
-            {sidenav_links.slice(-3, -1).map((link, i) => {
+            {sidenav_links.slice(6, -1).map((link, i) => {
                 return <li key={link.title} >
                     <a href={link.to} className='px-xs flex items-center justify-center'>
                         {<Icon IconElement={link.icon}/>}
