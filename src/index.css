@@ -584,12 +584,10 @@ section.platform {}
     align-self: start;
   }
 }
-@media screen and (max-width : 991px) {
+@media screen and (max-width : 1100px) {
   .hide-on-small {
     display: none;
   }
-}
-@media screen and (max-width: 726px) {
   .wrapper>main {
     grid-template-columns: 100%;
     grid-auto-rows: auto;
@@ -607,7 +605,7 @@ section.platform {}
   section.trends {
     grid-area: trends;
   }
-
+  
   section.orders {
     grid-area: orders;
   }
@@ -618,9 +616,13 @@ section.platform {}
   
   section.stat-cards {
     grid-area: cards;
+    grid-template-columns: repeat(2, 1fr);
   }
-}
 
+}
+@media screen and (max-width: 726px) {
+  
+}
 @media screen and (max-width: 625px) {
   main{
     padding: 10px;
