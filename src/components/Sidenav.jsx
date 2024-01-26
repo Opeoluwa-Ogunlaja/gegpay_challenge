@@ -14,6 +14,7 @@ import {
 } from "../assets/icons";
 import { Icon } from "./Icon";
 import Toggle from "./Toggle_mode_switch";
+import { useToggle } from "../hooks/useToggle";
 
 const sidenav_links = [
   {
@@ -65,10 +66,11 @@ const sidenav_links = [
 
 // for this one the array of links are already there withb the icons associated with them. You can then use the Icon element to render the icon by passing it into the iconelement prop basically. Work no too dey
 export const Sidenav = () => {
+  const [ open, toggleOpen ] = useToggle(false)
   return (
     <>
       <aside className="sidenav flex flex-column items-center">
-        <div className="sidenav-top flex flex-column items-center gap-lg">
+        <div className={`sidenav-top flex flex-column items-center gap-lg ${open && 'open'}`}>
           <div className="logo px-xs">
             <img src="/icons/logo.svg" alt="logo" />
             <h1 className="visually-hidden"></h1>
@@ -108,7 +110,7 @@ export const Sidenav = () => {
           })}
         </ul>
       </aside>
-      <div className="sidenav-toggle"><Icon iconelement={MenuIcon} className={'aspect-square colored'}/></div>
+      <button className="sidenav-toggle" onClick={toggleOpen}><Icon iconelement={MenuIcon} className={'aspect-square colored'}/></button>
     </>
   );
 };

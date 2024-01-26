@@ -34,15 +34,6 @@
   top: 8px;
 }
 
-@media screen and (max-width: 726px) {
-  .sidenav {
-    width: 0;
-    translate: -100% 0;
-    clip-path: inset(100%);
-    position: relative;
-  }
-}
-
 .sidenav-toggle {
   position: fixed;
   left: 0;
@@ -72,4 +63,13 @@
 
 .sidenav-toggle svg {
   width: 24px;
+}
+
+@media screen and (max-width: 726px) {
+  .sidenav {
+    width: 0;
+    translate: -100% 0;
+    clip-path: inset(100%);
+    position: relative;
+  }
 }
