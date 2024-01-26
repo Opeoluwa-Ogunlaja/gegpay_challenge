@@ -102,7 +102,7 @@ const options = {
   },
   maintainAspectRatio: false,
   responsive: true,
-  width: 800,
+  width: '100%',
   plugins: {
     tooltip: {
       yAlign: "bottom",

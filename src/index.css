@@ -611,6 +611,14 @@ section.orders tr > *{
     grid-auto-rows: auto;
     padding: var(--space-lg);
   }
+
+  .sidenav{
+    width: 0;
+    translate: -100% 0;
+    clip-path: inset(100%);
+    position: relative;
+  }
+
   section.trends {
     grid-area: trends;
   }
@@ -635,6 +643,7 @@ section.orders tr > *{
     ;
   }
 }
+
 @media screen and (max-width: 625px) {
   main{
     padding: 10px;
