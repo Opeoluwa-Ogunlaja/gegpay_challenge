@@ -85,6 +85,8 @@ export const Sidenav = () => {
                 </li>
             })}
         </ul>
+
+        <div className='sidenav-toggle'>Hello</div>
     </aside>
   )
 }
