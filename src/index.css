@@ -448,8 +448,11 @@ section.orders td{
 section.orders th{
   padding: var(--space-base) var(--space-base) var(--space-base) 0;
 }
-section.orders tr{
+section.orders tr:not(section.orders tr:last-of-type){
   border-bottom: 1px solid var(--clr-neutral-150);
+}
+section.orders tr:not(section.orders tr:first-of-type):hover{
+  background-color: var(--clr-neutral-50);
 }
 section.orders tr > *{
   width: max-content;
