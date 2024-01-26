@@ -18,7 +18,7 @@ export const PlatformElement = ({ data }) => {
             color: data?.color || 'green',
             height: data?.height || 12
           }}></div>
-          <div className='justify-between items-center flex font-regular leading-wider'>
+          <div className='justify-between items-center flex font-regular leading-wider text-md'>
             <span>${numberFormat(data.value) || undefined}</span>
             <span>+{data.increase || undefined}%</span>
           </div>
