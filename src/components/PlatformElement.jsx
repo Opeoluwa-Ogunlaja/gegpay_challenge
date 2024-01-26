@@ -6,7 +6,7 @@ export const PlatformElement = ({ data }) => {
 
   useEffect(() => {
     if(platformSliderRef.current){
-      platformSliderRef.current.style.setProperty('--slider-width', `${data?.width || 200}px`)
+      platformSliderRef.current.style.setProperty('--slider-width', `${(((data?.width || 200) / 452) * 100)}%`)
     }
   }, [platformSliderRef])
   

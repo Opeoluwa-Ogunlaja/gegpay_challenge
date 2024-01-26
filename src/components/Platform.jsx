@@ -5,6 +5,7 @@ const platforms = [
   {
     title: "Book Bazaar",
     color: 'hsla(240, 54%, 62%, 1)',
+    width: 245,
     value: 2500000,
     increase: 15
   },
@@ -12,18 +13,21 @@ const platforms = [
     title: "Artisan Aisle",
     color: 'hsla(195, 75%, 63%, 1)',
     value: 1800000,
+    width: 204.31313,
     increase: 10
   },
   {
     title: "Toy Troop",
     color: 'hsla(36, 100%, 65%, 1)',
     value: 1200000,
+    width: 122.13131,
     increase: 8
   },
   {
     title: "XStore",
     color: 'hsla(356, 100%, 65%, 1)',
     value: 1000000,
+    width: 122.13131,
     increase: 5
   },
 ];
