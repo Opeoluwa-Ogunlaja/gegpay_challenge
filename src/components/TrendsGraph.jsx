@@ -35,6 +35,15 @@ const points = [
   5300, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000, 26000,
 ];
 
+const createLinearGradient = (color1, color2) => {
+  const ctx = document.createElement('canvas').getContext('2d');
+  const gradient = ctx.createLinearGradient(0, 0, 0, 400)
+  gradient.addColorStop(0, color1);
+  gradient.addColorStop(1, color2);
+  return gradient;
+};
+
+
 const maxNum = (arr) => {
   if (arr.length <= 0) return null;
 
@@ -55,7 +64,7 @@ const data = {
       backgroundColor: "hsla(165, 59%, 50%, .1)",
       borderWidth: 0,
       borderRadius: 9999,
-      hoverBackgroundColor: "hsla(165, 59%, 50%, 1)",
+      hoverBackgroundColor: createLinearGradient('hsl(0, 0%, 100%)', 'hsla(165, 59%, 50%, 1)'),
     },
   ],
 };
