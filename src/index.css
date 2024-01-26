@@ -443,6 +443,7 @@ section.orders th{
 }
 section.orders td{
   padding: var(--space-sm) var(--space-sm) var(--space-sm) 0;
+  text-wrap: nowrap;
 }
 section.orders th{
   padding: var(--space-base) var(--space-base) var(--space-base) 0;
@@ -641,6 +642,10 @@ section.platform {}
   }
   section.stat-cards {
     grid-template-columns: 1fr
+  }
+  section.orders td{
+    padding: var(--space-sm) var(--space-xl) var(--space-sm) 0;
+    text-wrap: nowrap;
   }
 }
 
