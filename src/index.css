@@ -578,6 +578,7 @@ section.platform {}
       'platform cards'
       'orders cards'
     ;
+    grid-template-columns: 60.5% 37.5%;
   }
   section.stat-cards{
     grid-template-columns: 1fr;
@@ -593,6 +594,9 @@ section.platform {}
     grid-auto-rows: auto;
     padding: var(--space-lg);
   }
+  /* .wrapper>main {
+    grid-template-columns: 60.5% 37.5%;
+  } */
   .wrapper>main {
     grid-template-areas:
       'trends'
@@ -634,6 +638,9 @@ section.platform {}
   
   section.platform{
     height: 100% !important;
+  }
+  section.stat-cards {
+    grid-template-columns: 1fr
   }
 }
 
