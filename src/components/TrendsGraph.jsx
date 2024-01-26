@@ -109,6 +109,7 @@ const options = {
       },
     },
   },
+  maintainAspectRatio : false,
   responsive: true,
   plugins: {
     tooltip: {
