@@ -22,6 +22,7 @@
   padding: var(--space-xs) 0;
   width: 100%;
   position: relative;
+  transition: transform,max-width .3s ease-in-out;
 }
 
 .sidenav a.active-link::before {
@@ -67,9 +68,14 @@
 
 @media screen and (max-width: 726px) {
   .sidenav {
-    width: 0;
-    translate: -100% 0;
-    clip-path: inset(100%);
+    max-width: 0;
+    /* translate: -100% 0; */
     position: relative;
+    visibility: hidden;
+  }
+  .sidenav.open {
+    visibility: visible;
+    max-width: max-content;
+    /* translate: 0 0; */
   }
 }

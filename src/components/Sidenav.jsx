@@ -64,13 +64,14 @@ const sidenav_links = [
   },
 ];
 
-// for this one the array of links are already there withb the icons associated with them. You can then use the Icon element to render the icon by passing it into the iconelement prop basically. Work no too dey
+
 export const Sidenav = () => {
   const [ open, toggleOpen ] = useToggle(false)
+  console.log(open);
   return (
     <>
-      <aside className="sidenav flex flex-column items-center">
-        <div className={`sidenav-top flex flex-column items-center gap-lg ${open && 'open'}`}>
+      <aside className={`sidenav flex flex-column items-center${open ? ' open' : ''}`}>
+        <div className={`sidenav-top flex flex-column items-center gap-lg`}>
           <div className="logo px-xs">
             <img src="/icons/logo.svg" alt="logo" />
             <h1 className="visually-hidden"></h1>
@@ -110,7 +111,7 @@ export const Sidenav = () => {
           })}
         </ul>
       </aside>
-      <button className="sidenav-toggle" onClick={toggleOpen}><Icon iconelement={MenuIcon} className={'aspect-square colored'}/></button>
+      <button className="sidenav-toggle" onClick={() => toggleOpen()}><Icon iconelement={MenuIcon} className={'aspect-square colored'}/></button>
     </>
   );
 };
