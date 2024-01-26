@@ -19,7 +19,7 @@ const dummyData = [
     fullName: 'Jaydon Vaccaro',
     date: 'Nov 15, 2023',
     amount: '$80,000',
-    status: 'Paid',
+    status: 'Refund',
     invoice : ''
   },
   {
@@ -37,7 +37,7 @@ const dummyData = [
     fullName: 'Cooper Press',
     date: 'Nov 15, 2023',
     amount: '$80,000',
-    status: 'Paid',
+    status: 'Refund',
     invoice : ''
   },
   {
@@ -54,7 +54,7 @@ const dummyData = [
 
 export const Orders = () => {
   return (
-    <section className='orders'>
+    <section className='orders '>
       <div className='flex justify-between items-center'>
         <h3 className='font-semibold section-header'>Last Orders</h3>
         <a href="" className='section-header'>See All</a>
@@ -73,11 +73,15 @@ export const Orders = () => {
           <tbody>
             {dummyData.map((item) => {
               return <tr key={item.id}>
-                <td><Icon IconElement={item.dp}/> {item.fullName}</td>
-                <td>{item.date}</td>
-                <td>{item.amount}</td>
-                <td>{item.status}</td>
-                <td>invoice</td>
+                <td className='invoice_name_and_dp flex items-center gap-xs' ><Icon iconelement={item.dp}/> {item.fullName}</td>
+                <td style={{color: 'var(--clr-neutral-400)'}}>{item.date}</td>
+                <td className='font-semibold'>{item.amount}</td>
+                <td className={`status status-${item.status.toLowerCase()}`}>{item.status}</td>
+                <td className='space-x-xxs'><Icon iconelement={FileDownload}
+                  style={{
+                    verticalAlign: 'middle'
+                  }}
+                /><span>invoice</span></td>
               </tr>     
             })}
           </tbody>

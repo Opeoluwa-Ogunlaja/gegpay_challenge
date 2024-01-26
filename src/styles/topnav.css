@@ -5,6 +5,9 @@
     padding: var(--space-md);
     border-bottom: 1px solid var(--clr-neutral-150);
     /* overflow-x: scroll; */
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
   
   .topnav .topnav_left p{

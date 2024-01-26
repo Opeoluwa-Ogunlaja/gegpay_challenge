@@ -1,37 +1,18 @@
-// import {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 
-// import React from 'react'
-// import { useMediaQuery } from "react-responsive";
-// import {SunDim, MoonStars} from "@phosphor-icons/react";
+import React from 'react'
+import { useTheme } from "../contexts/ThemeProvider";
+import { LightIcon, MoonIcon } from "../assets/icons";
+import { Icon } from "./Icon";
 
-// const Toggle = () => {
-//     const [isDark, setIsDark] = useState(true);
+const Toggle = () => {
+    const [theme, setTheme] = useTheme();
+    return (
+        <div className={`flex flex-column gap-xxs items-center gap-20 toggle-slider ${ theme == 'dark' ? 'down' : 'up' }`}>
+            <button className="grid" onClick={() => setTheme('light')}><Icon className={'colored'} iconelement={LightIcon}/></button>
+            <button className="grid" onClick={() => setTheme('dark')}><Icon className={'colored'} iconelement={MoonIcon}/></button>
+        </div>
+    )
+}
 
-//     const systemPrefersDark = useMediaQuery({query: "(prefers-color-scheme: dark)",}, undefined, (isSystemDark) => setIsDark(isSystemDark));
-//       useEffect(() => {
-//         if (isDark) {
-//           document.body.classList.add('dark');
-//         } else {
-//           document.body.classList.remove('dark');
-//         }
-//       }, [isDark]);
-
-//     return (
-//         <div className="toggleButtonContainer">
-//             <span>Light</span>
-//             <label htmlFor="toggleButton" className="toggleButton" style={{backgroundColor: !isDark ? "var(--background-color) " : "var(--green-color)" }}>
-//                 <input 
-//                     type="checkbox" 
-//                     name="toggleButton" 
-//                     id="toggleButton" 
-//                     checked={isDark}
-//                     onChange={({ target }) => setIsDark(target.checked)}
-//                 />
-//                 <span className="dot" style={{right: isDark ? 1 : 22}}>{!isDark ? <SunDim /> : <MoonStars />}</span>
-//             </label>
-//             <span>Dark</span>
-//         </div>
-//     )
-// }
-
-// export default Toggle
+export default Toggle

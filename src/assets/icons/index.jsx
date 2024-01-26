@@ -10,5 +10,12 @@ import Profile2UserIcon from './profile-2user.svg?react'
 import Setting2Icon from './setting-2.svg?react'
 import TrendUpIcon from './trend-up.svg?react'
 import FileDownload from './file-download.svg?react'
+import BoxTickICon from './box-tick.svg?react'
+import ShoppingCartIcon from './shopping-cart.svg?react'
+import CoinIcon from './coin.svg?react'
+import RotateIcon from './3d-rotate.svg?react'
+import TrendingUpIcon from './trending-up.svg?react'
+import TrendingDownIcon from './trending-down.svg?react'
+import MenuIcon from './menu.svg?react'
 
-export { CategoryIcon, ArrowRightIcon, BoxIcon, DiscountIcon, InfoCircleIcon, LightIcon, LogoutIcon, MoonIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon, FileDownload }
+export { MenuIcon, TrendingUpIcon,TrendingDownIcon, BoxTickICon,ShoppingCartIcon, CoinIcon, RotateIcon, CategoryIcon, ArrowRightIcon, BoxIcon, DiscountIcon, InfoCircleIcon, LightIcon, LogoutIcon, MoonIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon, FileDownload }

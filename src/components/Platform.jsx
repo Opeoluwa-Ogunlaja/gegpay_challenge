@@ -4,25 +4,25 @@ import { PlatformElement } from "./PlatformElement";
 const platforms = [
   {
     title: "Book Bazaar",
-    color: 'blue',
+    color: 'hsla(240, 54%, 62%, 1)',
     value: 2500000,
     increase: 15
   },
   {
     title: "Artisan Aisle",
-    color: 'cyan',
+    color: 'hsla(195, 75%, 63%, 1)',
     value: 1800000,
     increase: 10
   },
   {
     title: "Toy Troop",
-    color: 'yellow',
+    color: 'hsla(36, 100%, 65%, 1)',
     value: 1200000,
     increase: 8
   },
   {
     title: "XStore",
-    color: 'red',
+    color: 'hsla(356, 100%, 65%, 1)',
     value: 1000000,
     increase: 5
   },

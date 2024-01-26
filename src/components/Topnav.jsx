@@ -4,19 +4,18 @@ import Notification from "../assets/icons/notification.svg";
 import Calender from "../assets/icons/calender.svg";
 import ArrowDown from "../assets/icons/Arrow Down.svg";
 import Profile from "../assets/icons/Profile.svg";
+import { Icon } from "./Icon";
+import { MenuIcon } from "../assets/icons";
 
-const Icon = ({ IconElement }) => {
-  return <IconElement />;
-};
 export const Topnav = () => {
   return (
     <header className="topnav flex items-center justify-between gap-md">
-      <div className="topnav_left">
+      <div className="topnav_left flex justify-center gap-md ">
         <p className="leading-heading-1">Dashboard</p>
       </div>
 
       <div className="topnav_right flex items-center justify-center gap-md">
-        <div className="search_bar">
+        <div className="search_bar hide-on-small">
           <div>
             <img src={Search} alt="" />
             <input type="text" placeholder="Search..." />

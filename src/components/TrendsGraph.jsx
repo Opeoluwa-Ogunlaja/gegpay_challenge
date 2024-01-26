@@ -23,7 +23,9 @@ ChartJS.register(
 );
 
 ChartJS.defaults.font = {
-  size: 16,
+  size: 14,
+  weight: 600,
+  lineHeight: "16px",
   family: "Plus Jakarta sans",
 };
 
@@ -79,13 +81,28 @@ const options = {
       grid: {
         display: false,
       },
+      ticks: {
+        font: {
+          size: 12,
+          lineHeight: "22px",
+        },
+      },
     },
     y: {
       beginAtZero: true,
       min: 0,
       max: maxNum(points) + 5000,
+      ticks: {
+        font: {
+          size: 14,
+          lineHeight: "16px",
+        },
+      },
     },
   },
+  maintainAspectRatio: false,
+  responsive: true,
+  width: 800,
   plugins: {
     tooltip: {
       yAlign: "bottom",
@@ -112,7 +129,7 @@ export const TrendsGraph = () => {
           <button>Weekly</button>
         </div>
       </div>
-      <Chart options={options} data={data} type={"bar"} />
+      <Chart options={options} data={data} type={"bar"} style={{}} />
     </section>
   );
 };

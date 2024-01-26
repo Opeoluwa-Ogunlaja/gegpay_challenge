@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ArrowRightIcon, BoxIcon, CategoryIcon, DiscountIcon, InfoCircleIcon, LogoutIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon } from '../assets/icons';
 import { Icon } from './Icon';
-// import Toggle from './toggle_mode_switch';
+import Toggle from './Toggle_mode_switch';
 
 const sidenav_links = [
     {
@@ -52,7 +52,7 @@ const sidenav_links = [
     }
 ]
 
-// for this one the array of links are already there withb the icons associated with them. You can then use the Icon element to render the icon by passing it into the IconElement prop basically. Work no too dey
+// for this one the array of links are already there withb the icons associated with them. You can then use the Icon element to render the icon by passing it into the iconelement prop basically. Work no too dey
 export const Sidenav = () => {
   return (
     <aside className='sidenav flex flex-column items-center'>
@@ -65,23 +65,21 @@ export const Sidenav = () => {
                 {sidenav_links.slice(0, -3).map((link, i) => {
                     return <li key={link.title}>
                         <a href={link.to} className='px-xs flex items-center justify-center'>
-                        {   <Icon IconElement={link.icon}/>}
+                        {   <Icon iconelement={link.icon}/>}
                             <span className='visually-hidden'>{link.title}</span>
                         </a>
                     </li>
                 })}
+                <li>
+                    <Toggle />
+                </li>
             </ul>
-            <div className="light_and_dark_toggle">
-                <label htmlFor="lightDarkToggle">
-                    {/* <Toggle /> */}
-                </label>
-            </div>
         </div>
         <ul className='sidenav-bottom flex flex-column items-center gap-lg'>
             {sidenav_links.slice(6, -1).map((link, i) => {
                 return <li key={link.title} >
                     <a href={link.to} className='px-xs flex items-center justify-center'>
-                        {<Icon IconElement={link.icon}/>}
+                        {<Icon iconelement={link.icon}/>}
                         <span className='visually-hidden'>{link.title}</span>
                     </a>
                 </li>
