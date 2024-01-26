@@ -612,13 +612,6 @@ section.orders tr > *{
     padding: var(--space-lg);
   }
 
-  .sidenav{
-    width: 0;
-    translate: -100% 0;
-    clip-path: inset(100%);
-    position: relative;
-  }
-
   section.trends {
     grid-area: trends;
   }

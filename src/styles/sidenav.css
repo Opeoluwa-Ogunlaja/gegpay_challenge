@@ -1,34 +1,43 @@
 /* Sidevav */
-.sidenav{
-    grid-row: span 2;
-    order: 1;
-    padding-block: var(--space-lg);
-    height: auto;
-    border-right: 1px solid var(--clr-neutral-150);
-    background-color: var(--clr-neutral-bg);
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    height: 100dvh;
-  }
-  
-  .sidenav-bottom{
-    margin-top: auto;
-    height: auto;
-  }
-  
-  .sidenav ul >li > a{
-    padding: var(--space-xs) 0;
-    width: 100%;
+.sidenav {
+  grid-row: span 2;
+  order: 1;
+  padding-block: var(--space-lg);
+  height: auto;
+  border-right: 1px solid var(--clr-neutral-150);
+  background-color: var(--clr-neutral-bg);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.sidenav-bottom {
+  margin-top: auto;
+  height: auto;
+}
+
+.sidenav ul>li>a {
+  padding: var(--space-xs) 0;
+  width: 100%;
+  position: relative;
+}
+
+.sidenav a.active-link::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  border-radius: 8px 0 0 8px;
+  height: 30px;
+  right: 0;
+  top: 8px;
+}
+
+@media screen and (max-width: 726px) {
+  .sidenav {
+    width: 0;
+    translate: -100% 0;
+    clip-path: inset(100%);
     position: relative;
   }
-
-  .sidenav a.active-link::before{
-    content: '';
-    position: absolute;
-    width: 5px;
-    border-radius: 8px 0 0 8px;
-    height: 30px;
-    right: 0;
-    top: 8px;
-  }
+}
