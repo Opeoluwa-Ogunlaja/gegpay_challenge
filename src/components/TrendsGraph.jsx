@@ -37,7 +37,7 @@ const points = [
 
 const createLinearGradient = (color1, color2) => {
   const ctx = document.createElement('canvas').getContext('2d');
-  const gradient = ctx.createLinearGradient(0, 0, 0, 400)
+  const gradient = ctx.createLinearGradient(0, 0, 0, 350)
   gradient.addColorStop(0, color1);
   gradient.addColorStop(1, color2);
   return gradient;
@@ -64,7 +64,7 @@ const data = {
       backgroundColor: "hsla(165, 59%, 50%, .1)",
       borderWidth: 0,
       borderRadius: 9999,
-      hoverBackgroundColor: createLinearGradient('hsl(0, 0%, 100%)', 'hsla(165, 59%, 50%, 1)'),
+      hoverBackgroundColor: createLinearGradient('hsla(165, 59%, 50%, 1)', 'hsl(0, 0%, 100%)' ),
     },
   ],
 };
@@ -132,10 +132,14 @@ export const TrendsGraph = () => {
   return (
     <section className="trends">
       <div className="flex items-center justify-between">
-        <h2 className="section-header font-semibold">Sales Trends</h2>
-        <div className="flex items-center">
+        <h2 className="section-header font-semibold text-sm">Sales Trends</h2>
+        <div className="flex items-center gap-xs">
           <h4>Sort by: </h4>
-          <button>Weekly</button>
+          <select name="" id="" className="ff-base px-xs rounded-lg">
+            <option value="weekly" selected defaultValue='weekly'>Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+          </select>
         </div>
       </div>
       <Chart options={options} data={data} type={"bar"} style={{}} />

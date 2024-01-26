@@ -50,7 +50,7 @@ export const StatsCards = () => {
     <section className='stat-cards grid gap-lg'>
       {
         statData.map((stats) => {
-          return  <div className="inner-card flex flex-column gap-sm" key={stats.id}>
+          return  <div className="inner-card flex flex-column gap-xs" key={stats.id}>
                     <div className='icon_and_graph'>
                       <div className='flex items-center justify-center stat-icon-container'>
                         <Icon iconelement={stats.icon} style={{width: '24px'}} />
@@ -59,12 +59,12 @@ export const StatsCards = () => {
 
                       </div>
                     </div>
-                    <div className="flex flex-column gap-sm">
+                    <div className="flex flex-column">
                       <p className='font-md color-neutral-400 leading-wider' >{stats.title}</p>
-                      <b className='font-semibold text-xl leading-heading-5'>{stats.amount}</b>
+                      <b className='font-semibold text-xl leading-heading-4'>{stats.amount}</b>
                     </div>
                     <div className="stat_analytics flex align-center gap-xs">
-                      <div className={`regard regard-${stats.regard} flex gap-xs items-center`}>
+                      <div className={`regard regard-${stats.regard} flex gap-xxs items-center`}>
                         <Icon className={'colored colored-stroke'} iconelement={TrendingUpIcon} />
                         {stats.percentage}
                       </div>
