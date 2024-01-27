@@ -61,7 +61,7 @@ body.dark .sidenav{
   border-radius: 8px;
   transform-origin: left;
   visibility: hidden;
-  transition: left .5s ease-in-out;
+  transition: left .3s ease-in-out;
   /* animation: highlight .5s ease-in alternate infinite; */
 }
 
@@ -110,10 +110,10 @@ body.dark .sidenav{
     z-index: 1000;
     translate: -100% 0;
     bottom: 0;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in;
   }
   .sidenav.open {
-    translate: 0;
+    translate: 0 0;
   }
   .sidenav-toggle{
     left: 0;
@@ -139,6 +139,5 @@ body.dark .sidenav{
     background-color: rgb(255, 255, 255 / 30%);
     backdrop-filter: blur(5px);
     display: block;
-    pointer-events: none;
   }
 }

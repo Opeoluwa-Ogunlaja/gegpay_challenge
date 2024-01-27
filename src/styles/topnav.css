@@ -76,7 +76,7 @@
     gap: var(--space-sm);
     padding: var(--space-xxs);
     border: 1px solid var(--clr-neutral-150);
-    border-radius: 28px;
+    border-radius: 9999px;
   }
   .profile_container .name_and_email{
     gap: 4px;
@@ -101,5 +101,13 @@
 
     .topnav-right, .calendar_and_notification{
       gap: var(--space-xxs)
+    }
+
+    .topnav_right .profile_menu > .profile_container{
+      padding: 4px;
+    }
+
+    .caret-down svg{
+      width: 16px;
     }
   }
