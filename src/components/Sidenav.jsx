@@ -1,20 +1,20 @@
-import React from "react";
+import React , {useRef} from "react";
 
 import {
+  ArrowDownIcon,
   ArrowRightIcon,
   BoxIcon,
   CategoryIcon,
   DiscountIcon,
   InfoCircleIcon,
   LogoutIcon,
-  MenuIcon,
   Profile2UserIcon,
   Setting2Icon,
   TrendUpIcon,
 } from "../assets/icons";
 import { Icon } from "./Icon";
 import Toggle from "./Toggle_mode_switch";
-import { useToggle } from "../hooks/useToggle";
+import useClickOutside from "../hooks/useClickOutside";
 
 const sidenav_links = [
   {
@@ -65,18 +65,22 @@ const sidenav_links = [
 ];
 
 
-export const Sidenav = () => {
-  const [ open, toggleOpen ] = useToggle(false)
-  console.log(open);
+export const Sidenav = ({ toggleState }) => {
+  const [ open, toggleOpen, set ] = toggleState
+  const sidenavRef = useRef(null)
+
+  useClickOutside(sidenavRef, (e) => {
+    if (open && !e.target.classList.contain('.sidenav-toggler')) set(false);
+  })
   return (
     <>
-      <aside className={`sidenav flex flex-column items-center${open ? ' open' : ''} clr-neutral-bg`}>
+      <aside className={`sidenav flex flex-column items-center${open ? ' open' : ''} clr-neutral-bg`} ref={sidenavRef}>
         <div className={`sidenav-top flex flex-column items-center gap-lg`}>
           <div className="logo px-xs">
             <img src="/icons/logo.svg" alt="logo" />
             <h1 className="visually-hidden"></h1>
           </div>
-          <ul className="flex flex-column items-center gap-lg">
+          <ul className="sidenav-links-list flex flex-column items-center">
             {sidenav_links.slice(0, -3).map((link, i) => {
               return (
                 <li key={link.title}>
@@ -95,7 +99,7 @@ export const Sidenav = () => {
             </li>
           </ul>
         </div>
-        <ul className="sidenav-bottom flex flex-column items-center gap-lg">
+        <ul className="sidenav-bottom sidenav-links-list flex flex-column items-center">
           {sidenav_links.slice(6, -1).map((link, i) => {
             return (
               <li key={link.title}>
@@ -111,7 +115,7 @@ export const Sidenav = () => {
           })}
         </ul>
       </aside>
-      <button className="sidenav-toggle" onClick={() => toggleOpen()}><Icon iconelement={MenuIcon} className={'aspect-square colored'}/></button>
+      <button className="sidenav-toggle" data-open={open} onClick={() => toggleOpen()}><Icon iconelement={ArrowDownIcon} className={'aspect-square colored'}/></button>
     </>
   );
 };

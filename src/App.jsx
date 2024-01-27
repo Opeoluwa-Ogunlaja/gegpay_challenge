@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import "./App.css";
 import "./styles/topnav.css";
 import "./styles/sidenav.css";
@@ -9,8 +10,13 @@ import { Orders } from "./components/Orders";
 import { Platform } from "./components/Platform";
 import { useTheme } from "./contexts/ThemeProvider";
 import { useEffect } from "react";
+import { useToggle } from "./hooks/useToggle";
+import { useEventListener } from "./hooks/useEventListener";
 
 function App() {
+  const toggleState = useToggle(false)
+  const [open,] = toggleState
+
   const themeArr = useTheme()
   useEffect(() => {
     const theme = themeArr[0]
@@ -25,7 +31,8 @@ function App() {
   return (
       <div className="grid main-container">
         <Topnav />
-        <Sidenav />
+        <Sidenav toggleState={toggleState}/>
+        <div className={`side-nav-underlay${open ? ' open': ''}`}></div>
         <div className="wrapper grid">
           <main className="grid gap-lg">
             <TrendsGraph />

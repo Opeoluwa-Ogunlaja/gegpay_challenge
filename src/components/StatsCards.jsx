@@ -4,6 +4,7 @@ import { RotateIcon,TrendingUpIcon } from '../assets/icons'
 import { BoxTickICon } from '../assets/icons'
 import { CoinIcon } from '../assets/icons'
 import { ShoppingCartIcon } from '../assets/icons'
+import { ChartDown, ChartUp } from '../assets/images'
 
 const statData = [
   {
@@ -51,12 +52,12 @@ export const StatsCards = () => {
       {
         statData.map((stats) => {
           return  <div className="inner-card flex flex-column gap-xs" key={stats.id}>
-                    <div className='icon_and_graph'>
+                    <div className='icon_and_graph flex items-center justify-between'>
                       <div className='flex items-center justify-center stat-icon-container'>
                         <Icon iconelement={stats.icon} style={{width: '24px'}} />
                       </div>
                       <div className="stat-graph">
-
+                        <Icon iconelement={stats.regard == 'gain' ? ChartUp : ChartDown}/>
                       </div>
                     </div>
                     <div className="flex flex-column">

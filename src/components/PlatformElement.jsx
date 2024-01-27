@@ -11,9 +11,9 @@ export const PlatformElement = ({ data }) => {
   }, [platformSliderRef])
   
   return (
-    <div className='flex flex-column gap-xxs'>
+    <div className='flex flex-column gap-base'>
         <h4 className='section-header font-semibold leading-norm clr-neutral-900'>{data?.title || 'undefined'}</h4>
-        <div className='space-y-sm'>
+        <div className='space-y-base'>
           <div className='platform-slider' ref={platformSliderRef} style={{
             color: data?.color || 'green',
             height: data?.height || 12

@@ -32,7 +32,7 @@ ChartJS.defaults.font = {
 import { Chart } from "react-chartjs-2";
 
 const points = [
-  5300, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000, 26000,
+  6000, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000, 26000,
 ];
 
 const createLinearGradient = (color1, color2) => {
@@ -59,12 +59,15 @@ const maxNum = (arr) => {
 const data = {
   datasets: [
     {
-      barThickness: 30,
       data: points,
       backgroundColor: "hsla(165, 59%, 50%, .1)",
       borderWidth: 0,
       borderRadius: 9999,
       hoverBackgroundColor: createLinearGradient('hsla(165, 59%, 50%, 1)', 'hsl(0, 0%, 100%)' ),
+      bar: {
+        barPercentage: 0.4,
+        categoryPercentage: 0.4
+      }
     },
   ],
 };
@@ -134,14 +137,14 @@ export const TrendsGraph = () => {
         <h2 className="section-header font-semibold text-sm clr-neutral-900">Sales Trends</h2>
         <div className="flex items-center gap-xs">
           <h4 className="clr-neutral-900">Sort by: </h4>
-          <select name="" id="" className="ff-base px-xs rounded-lg">
+          <select name="" id="" className="ff-base px-xs rounded-lg space-sm clr-neutral-bg font-color">
             <option value="weekly" selected defaultValue='weekly'>Weekly</option>
             <option value="monthly">Monthly</option>
             <option value="yearly">Yearly</option>
           </select>
         </div>
       </div>
-      <Chart options={options} data={data} type={"bar"} style={{}} />
+      <Chart options={options} data={data} type={"bar"} style={{ width: '756px', height: '80%' }} />
     </section>
   );
 };

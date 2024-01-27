@@ -17,5 +17,11 @@ import RotateIcon from './3d-rotate.svg?react'
 import TrendingUpIcon from './trending-up.svg?react'
 import TrendingDownIcon from './trending-down.svg?react'
 import MenuIcon from './menu.svg?react'
+import NotificationIcon from './notification.svg?react'
+import CalenderIcon from './calender.svg?react'
+import ArrowDownIcon from './Arrow Down.svg?react'
+import ProfileIcon from './Profile.svg?react'
+import SearchIcon from "./search.svg?react";
+import CloseIcon from "./close.svg?react";
 
-export { MenuIcon, TrendingUpIcon,TrendingDownIcon, BoxTickICon,ShoppingCartIcon, CoinIcon, RotateIcon, CategoryIcon, ArrowRightIcon, BoxIcon, DiscountIcon, InfoCircleIcon, LightIcon, LogoutIcon, MoonIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon, FileDownload }
+export { MenuIcon, TrendingUpIcon,TrendingDownIcon, BoxTickICon,ShoppingCartIcon, CoinIcon, RotateIcon, CategoryIcon, ArrowRightIcon, BoxIcon, DiscountIcon, InfoCircleIcon, LightIcon, LogoutIcon, MoonIcon, Profile2UserIcon, Setting2Icon, TrendUpIcon, FileDownload, NotificationIcon, CalenderIcon, ArrowDownIcon, ProfileIcon, SearchIcon, CloseIcon }

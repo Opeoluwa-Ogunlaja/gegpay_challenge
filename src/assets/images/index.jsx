@@ -3,5 +3,7 @@ import User2 from './user2.svg?react'
 import User3 from './user3.svg?react'
 import User4 from './user4.svg?react'
 import User5 from './user5.svg?react'
+import ChartUp from './chart-up.svg?react'
+import ChartDown from './chart-down.svg?react'
 
-export { User1, User2, User3, User4, User5 }
+export { User1, User2, User3, User4, User5, ChartUp, ChartDown }

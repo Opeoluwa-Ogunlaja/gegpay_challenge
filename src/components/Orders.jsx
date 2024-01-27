@@ -73,15 +73,16 @@ export const Orders = () => {
           <tbody>
             {dummyData.map((item) => {
               return <tr key={item.id}>
-                <td className='invoice_name_and_dp flex items-center gap-xs clr-neutral-900' ><Icon iconelement={item.dp}/> {item.fullName}</td>
+                <td className='invoice_name_and_dp flex items-start gap-xs clr-neutral-900' ><Icon iconelement={item.dp}/> {item.fullName}</td>
                 <td style={{color: 'var(--clr-neutral-400)'}}>{item.date}</td>
                 <td className='font-semibold clr-neutral-900'>{item.amount}</td>
                 <td className={`status status-${item.status.toLowerCase()}`}>{item.status}</td>
-                <td className='space-x-xxs clr-neutral-900'><Icon iconelement={FileDownload}
-                  style={{
-                    verticalAlign: 'middle'
-                  }}
-                /><span>invoice</span></td>
+                <td className='space-x-xxs clr-neutral-900'>
+                  <div className='flex items-center' style={{gap: '6px'}}>
+                    <Icon iconelement={FileDownload}/>
+                    <span>invoice</span>
+                  </div>
+                </td>
               </tr>     
             })}
           </tbody>

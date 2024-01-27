@@ -34,14 +34,14 @@ const platforms = [
 
 export const Platform = () => {
   return (
-    <section className="platform">
+    <section className="platform  flex flex-column gap-lg">
       <div className="flex items-center justify-between">
         <h3 className="section-header font-semibold clr-neutral-900">Top Platform</h3>
-        <a href="/" className="font-regular section-header">
+        <a href="/" className="font-medium section-header">
           See All
         </a>
       </div>
-      <ul className="platforms flex flex-column gap-xxs">
+      <ul className="platforms flex flex-column gap-lg">
         {platforms.map((platform) => {
           return <li key={platform.title}>
             <PlatformElement data={platform}/>
