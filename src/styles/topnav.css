@@ -61,8 +61,18 @@
   padding-inline: var(--space-base);
   background-color: transparent;
   transition: all .3s;
+  position: relative;
 }
-
+.calendar-dropdown{
+  position: absolute;
+  padding: 12px;
+  right: 0;
+  top: 40px;
+  background-color: var(--clr-neutral-bg);
+  border: 1px solid var(--clr-neutral-150);
+  /* color: var(--clr-neutral-900); */
+  border-radius: 12px;
+}
 .calendar_and_notification>.topnav_notification {
   height: 40px;
   width: 40px;
