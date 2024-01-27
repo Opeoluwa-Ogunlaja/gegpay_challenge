@@ -5,25 +5,20 @@ import { useToggle } from "../hooks/useToggle";
 
 const dropdownLinks = [{
     to: '/',
-    title: 'bomb'
+    title: 'Profile'
 },
 {
     to: '/',
-    title: 'bomb'
+    title: 'Notifications'
 },
 {
     to: '/',
-    title: 'bomb'
-},
-{
-    to: '/',
-    title: 'bomb'
+    title: 'Calendar'
 }]
 
 
 export const ProfileDropdown = () => {
   const [dropdownOpen, toggleDropdownOpen] = useToggle(false)
-  
 
   return (
     <div className="profile-dropdown">
@@ -46,7 +41,13 @@ export const ProfileDropdown = () => {
           </div>
         </div>
         <div className={`profile-container-content${dropdownOpen ? ' open' : ''}`}>
-            <ul className="flex items-center"></ul>
+            <ul className="flex flex-column items-center gap-lg">
+                {dropdownLinks.map((link, i) => {
+                    return <li key={link.title + i}>
+                        <a href="/" className="font-medium text-md">{ link.title }</a>
+                    </li>
+                })}
+            </ul>
         </div>
       </div>
     </div>
