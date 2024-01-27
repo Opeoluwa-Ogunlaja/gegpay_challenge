@@ -70,7 +70,8 @@ export const Sidenav = ({ toggleState }) => {
   const sidenavRef = useRef(null)
 
   useClickOutside(sidenavRef, (e) => {
-    if (open && !e.target.classList.contain('.sidenav-toggler')) set(false);
+    console.log();
+    if (open && !(e.target.dataset?.toggle == 'sidenav' || e.target.parentElement.dataset?.toggle == 'sidenav')) set(false);
   })
   return (
     <>
@@ -115,7 +116,7 @@ export const Sidenav = ({ toggleState }) => {
           })}
         </ul>
       </aside>
-      <button className="sidenav-toggle" data-open={open} onClick={() => toggleOpen()}><Icon iconelement={ArrowDownIcon} className={'aspect-square colored'}/></button>
+      <button className="sidenav-toggle" data-open={open} data-toggle="sidenav" onClick={() => toggleOpen()}><Icon iconelement={ArrowDownIcon} data-toggle="sidenav" className={'aspect-square colored'}/></button>
     </>
   );
 };

@@ -140,7 +140,7 @@ export const TrendsGraph = () => {
         <div className="flex items-center gap-xs">
           <h4 className="clr-neutral-900">Sort by: </h4>
           <select name="" id="" className="ff-base px-xs rounded-lg space-sm clr-neutral-bg font-color">
-            <option value="weekly" selected defaultValue='weekly'>Weekly</option>
+            <option value="weekly" defaultValue>Weekly</option>
             <option value="monthly">Monthly</option>
             <option value="yearly">Yearly</option>
           </select>
