@@ -70,7 +70,7 @@ export const Sidenav = () => {
   console.log(open);
   return (
     <>
-      <aside className={`sidenav flex flex-column items-center${open ? ' open' : ''}`}>
+      <aside className={`sidenav flex flex-column items-center${open ? ' open' : ''} clr-neutral-bg`}>
         <div className={`sidenav-top flex flex-column items-center gap-lg`}>
           <div className="logo px-xs">
             <img src="/icons/logo.svg" alt="logo" />

@@ -102,6 +102,35 @@
   --rounded-full: 9999px;
 
 }
+body.dark{
+  /* Color */
+  --clr-primary: hsla(165, 59%, 50%, 1);
+  --clr-secondary: hsla(251, 76%, 10%, 1);
+
+  --clr-accent-warning: hsl(49, 100%, 48%);
+  --clr-accent-error: hsl(2, 82%, 62%);
+  --clr-accent-success: hsl(133, 47%, 59%);
+
+  --clr-white: hsl(210, 10%, 23%);
+  --clr-neutral-bg: hsl(210, 11%, 15%);
+  --clr-neutral-50: hsl(210, 11%, 15%);
+  --clr-neutral-150: hsla(0, 0%, 32%, 1);
+  --clr-neutral-900: hsl(210, 17%, 98%);
+  /* --clr-white: hsl(0, 0%, 100%);
+  --clr-neutral-bg: hsla(0, 0%, 99%, 1); */
+
+  --clr-neutral-100: hsla(0, 0%, 96%, 1);
+  --clr-neutral-200: hsla(0, 0%, 90%, 1);
+  --clr-neutral-300: hsla(0, 0%, 83%, 1);
+  --clr-neutral-400: hsla(0, 0%, 64%, 1);
+  --clr-neutral-500: hsla(0, 0%, 45%, 1);
+  --clr-neutral-600: hsla(0, 0%, 32%, 1);
+  --clr-neutral-700: hsla(0, 0%, 25%, 1);
+  --clr-neutral-800: hsla(0, 0%, 15%, 1);
+
+  /* background-color: var(--50); */
+
+}
 
 /* Resets */
 * {
@@ -329,6 +358,13 @@ textarea {
   font-weight: var(--font-semibold);
 }
 
+.clr-neutral-bg{
+  background-color: var(--clr-neutral-bg);
+}
+.clr-neutral-900{
+  color: var(--clr-neutral-900) !important;
+}
+
 /* border radius utlities */
 .rounded-lg{
   border-radius: var(--rounded-lg);
@@ -375,6 +411,7 @@ textarea {
   padding: var(--space-lg);
   overflow-y: hidden;
   overflow-x: scroll;
+  background-color: var(--clr-white);
 }
 .wrapper section {
   padding: var(--space-lg);
@@ -382,6 +419,9 @@ textarea {
   grid-area: unset;
   border-radius: var(--space-base);
   border: 1px solid var(--clr-neutral-150);
+}
+body.dark .wrapper section {
+  background-color: var(--clr-neutral-bg);
 }
 
 
@@ -398,7 +438,7 @@ section.trends {
 section.stat-cards{
   border: none;
   padding: 0;
-  background-color: transparent;
+  background-color: transparent !important;
   grid-template-columns: repeat(2, 1fr);
 }
 section.stat-cards  .inner-card{
@@ -406,6 +446,10 @@ section.stat-cards  .inner-card{
   background-color: var(--clr-white);
   padding: var(--space-base);
   border-radius: var(--space-base);
+}
+body.dark section.stat-cards  .inner-card{
+  background-color: var(--clr-neutral-bg);
+
 }
 .inner-card .regard{
   border-radius: var();
@@ -633,7 +677,7 @@ section.platform {}
 }
 @media screen and (max-width: 625px) {
   main{
-    padding: 10px;
+    padding: 10px !important;
   }
   
   section.trends{

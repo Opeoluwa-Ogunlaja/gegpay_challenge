@@ -56,7 +56,7 @@ export const Orders = () => {
   return (
     <section className='orders '>
       <div className='flex justify-between items-center'>
-        <h3 className='font-semibold section-header'>Last Orders</h3>
+        <h3 className='font-semibold section-header clr-neutral-900'>Last Orders</h3>
         <a href="" className='section-header'>See All</a>
       </div>
       <div className="last-orders-table">
@@ -73,11 +73,11 @@ export const Orders = () => {
           <tbody>
             {dummyData.map((item) => {
               return <tr key={item.id}>
-                <td className='invoice_name_and_dp flex items-center gap-xs' ><Icon iconelement={item.dp}/> {item.fullName}</td>
+                <td className='invoice_name_and_dp flex items-center gap-xs clr-neutral-900' ><Icon iconelement={item.dp}/> {item.fullName}</td>
                 <td style={{color: 'var(--clr-neutral-400)'}}>{item.date}</td>
-                <td className='font-semibold'>{item.amount}</td>
+                <td className='font-semibold clr-neutral-900'>{item.amount}</td>
                 <td className={`status status-${item.status.toLowerCase()}`}>{item.status}</td>
-                <td className='space-x-xxs'><Icon iconelement={FileDownload}
+                <td className='space-x-xxs clr-neutral-900'><Icon iconelement={FileDownload}
                   style={{
                     verticalAlign: 'middle'
                   }}

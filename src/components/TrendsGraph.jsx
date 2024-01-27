@@ -131,9 +131,9 @@ export const TrendsGraph = () => {
   return (
     <section className="trends">
       <div className="flex items-center justify-between">
-        <h2 className="section-header font-semibold text-sm">Sales Trends</h2>
+        <h2 className="section-header font-semibold text-sm clr-neutral-900">Sales Trends</h2>
         <div className="flex items-center gap-xs">
-          <h4>Sort by: </h4>
+          <h4 className="clr-neutral-900">Sort by: </h4>
           <select name="" id="" className="ff-base px-xs rounded-lg">
             <option value="weekly" selected defaultValue='weekly'>Weekly</option>
             <option value="monthly">Monthly</option>

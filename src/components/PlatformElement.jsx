@@ -12,15 +12,15 @@ export const PlatformElement = ({ data }) => {
   
   return (
     <div className='flex flex-column gap-xxs'>
-        <h4 className='section-header font-semibold leading-norm'>{data?.title || 'undefined'}</h4>
+        <h4 className='section-header font-semibold leading-norm clr-neutral-900'>{data?.title || 'undefined'}</h4>
         <div className='space-y-sm'>
           <div className='platform-slider' ref={platformSliderRef} style={{
             color: data?.color || 'green',
             height: data?.height || 12
           }}></div>
           <div className='justify-between items-center flex font-regular leading-wider text-md'>
-            <span>${numberFormat(data.value) || undefined}</span>
-            <span>+{data.increase || undefined}%</span>
+            <span className='clr-neutral-900'>${numberFormat(data.value) || undefined}</span>
+            <span className='clr-neutral-900'>+{data.increase || undefined}%</span>
           </div>
         </div>
     </div>
