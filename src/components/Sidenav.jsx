@@ -89,7 +89,7 @@ export const Sidenav = ({ toggleState }) => {
                     href={link.to}
                     className="px-xs flex items-center justify-center"
                   >
-                    {<Icon iconelement={link.icon} />}
+                    {<Icon iconelement={link.icon} className="sidenav-icon" />}
                     <span className="visually-hidden">{link.title}</span>
                   </a>
                 </li>
@@ -108,7 +108,7 @@ export const Sidenav = ({ toggleState }) => {
                   href={link.to}
                   className="px-xs flex items-center justify-center"
                 >
-                  {<Icon iconelement={link.icon} />}
+                  {<Icon iconelement={link.icon} className="sidenav-icon" />}
                   <span className="visually-hidden">{link.title}</span>
                 </a>
               </li>

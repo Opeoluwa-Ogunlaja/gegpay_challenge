@@ -121,10 +121,6 @@ body.dark .sidenav{
     color: #B2ABAB;
   }
 
-  .sidenav-links-list{
-    gap: 4px;
-  }
-
   .sidenav.open + .sidenav-toggle{
     left: 70px;
   }
@@ -139,5 +135,20 @@ body.dark .sidenav{
     background-color: rgb(255, 255, 255 / 30%);
     backdrop-filter: blur(5px);
     display: block;
+  }
+}
+
+@media screen and (height < 726px) {
+  .sidenav-icon{
+    aspect-ratio: 1;
+    width: 18px !important;
+  }
+
+  .sidenav-links-list{
+    gap: 6px;
+  }
+
+  .sidenav-links-list a{
+    height: fit-content;
   }
 }
