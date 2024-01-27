@@ -107,6 +107,7 @@
   opacity: 0;
   min-width:  100%;
   transition: all .3s;
+  right: 0;
 }
 
 .profile-container-content.open{
