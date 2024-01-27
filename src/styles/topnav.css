@@ -100,23 +100,29 @@
 }
 
 .profile-container-content{
-  display: none;
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  translate: -0.125rem 0;
+  opacity: 0;
+  min-width:  100%;
+  transition: all .3s;
 }
 
 .profile-container-content.open{
-  display: block;
-  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  translate: 0;
   background-color: white;
   margin-top: var(--space-xs);
   padding: var(--space-md);
-  min-width:  100%;
   padding-block: var(--space-sm);
   background-color: var(--clr-neutral-bg);
   border-radius: var(--rounded-lg);
   box-shadow: 1px 0 16px hsla(0, 0%, 64%, .2);
 }
 
-.profile-container-content.open a{
+.profile-container-content a{
   color: var(--clr-neutral-900);
 }
 
