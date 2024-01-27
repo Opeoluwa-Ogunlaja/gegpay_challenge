@@ -102,7 +102,7 @@ body.dark .sidenav{
   transform: scaleX(-1) rotateZ(90deg);
 }
 
-@media screen and (max-width: 726px) {
+@media screen and (max-width: 625px) {
   .sidenav {
     position: fixed;
     top: 0;

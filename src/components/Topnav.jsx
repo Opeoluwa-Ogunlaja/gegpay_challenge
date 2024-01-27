@@ -20,7 +20,7 @@ export const Topnav = () => {
         <p className="leading-wider clr-neutral-900">Dashboard</p>
       </div>
 
-      <div className="topnav_right flex items-center justify-center">
+      <div className="topnav_right flex items-center justify-center gap-md">
         <div className="search_bar hide-on-small">
           <div>
             <Icon iconelement={SearchIcon} />
@@ -28,7 +28,7 @@ export const Topnav = () => {
           </div>
         </div>
         <div className="calendar_and_notification flex items-center justify-between">
-          <div className="topnav_calender flex items-center cursor white-color">
+          <div className="topnav_calender flex items-center cursor">
             <Icon iconelement={CalenderIcon} alt="Calender_icon" />
             <p className="hide-on-small clr-neutral-900">January 23, 2024</p>
           </div>

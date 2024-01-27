@@ -68,13 +68,13 @@
     border-radius: 100%;
     transition: all .3s;
   }
-  .topnav_calender:hover, .topnav_notification:hover{
+  /* .topnav_calender:hover, .topnav_notification:hover{
     background-color: white;
-  }
+  } */
   
   .topnav_right .profile_menu > .profile_container{
     gap: var(--space-sm);
-    padding: 6px var(--space-xxs);
+    padding: var(--space-xxs);
     border: 1px solid var(--clr-neutral-150);
     border-radius: 28px;
   }
@@ -87,7 +87,7 @@
   }
   
 .topnav svg{
-  fill: var(--clr-neutral-900);
+  stroke: var(--clr-neutral-900);
 }
 
   @media screen and (max-width: 625px) {
