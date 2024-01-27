@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend,
   BarElement,
+  BarController
 } from "chart.js";
 
 ChartJS.register(
@@ -19,7 +20,8 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  BarElement
+  BarElement,
+  BarController
 );
 
 ChartJS.defaults.font = {
