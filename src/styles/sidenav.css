@@ -29,7 +29,7 @@ body.dark .sidenav{
 }
 
 .sidenav-links-list{
-  gap: var(--space-lg);
+  gap: var(--space-base);
 }
 
 .sidenav ul>li>a {
@@ -122,7 +122,7 @@ body.dark .sidenav{
   }
 
   .sidenav-links-list{
-    gap: 6px;
+    gap: 4px;
   }
 
   .sidenav.open + .sidenav-toggle{
