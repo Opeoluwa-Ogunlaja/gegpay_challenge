@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Icon } from "./Icon";
 import { ArrowDownIcon, ProfileIcon } from "../assets/icons";
 import { useToggle } from "../hooks/useToggle";
+import useClickOutside from "../hooks/useClickOutside";
 
 const dropdownLinks = [{
     to: '/',
@@ -18,12 +19,17 @@ const dropdownLinks = [{
 
 
 export const ProfileDropdown = () => {
-  const [dropdownOpen, toggleDropdownOpen] = useToggle(false)
+  const [dropdownOpen, toggleDropdownOpen, set] = useToggle(false)
+  const dropdownRef = useRef(null)
+
+  useClickOutside(dropdownRef, (e) => {
+    set(false)
+  })
 
   return (
-    <div className="profile-dropdown">
-      <div className="profile_menu cursor-pointer" onClick={() => toggleDropdownOpen()}>
-        <div className="profile_container flex items-center justify-center cursor">
+    <div className="profile-dropdown" ref={dropdownRef}>
+      <div className="profile_menu cursor-pointer">
+        <div className="profile_container flex items-center justify-center cursor" onClick={() => toggleDropdownOpen()}>
           <Icon
             iconelement={ProfileIcon}
             style={{ borderRadius: "inherit" }}
@@ -37,6 +43,7 @@ export const ProfileDropdown = () => {
             <Icon
               iconelement={ArrowDownIcon}
               className="aspect-square"
+              style={{ transform: dropdownOpen ? 'rotateY(180deg)' : '' }}
             />
           </div>
         </div>
