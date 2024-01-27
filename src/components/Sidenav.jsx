@@ -76,7 +76,7 @@ export const Sidenav = ({ toggleState }) => {
   })
   return (
     <>
-      <aside className={`sidenav flex flex-column items-center${open ? ' open' : ''} clr-neutral-bg`} ref={sidenavRef}>
+      <aside className={`sidenav flex flex-column items-center${open ? ' open' : ''}`} ref={sidenavRef}>
         <div className={`sidenav-top flex flex-column items-center gap-lg`}>
           <div className="logo px-xs">
             <img src="/icons/logo.svg" alt="logo" />
