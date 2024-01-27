@@ -34,7 +34,7 @@ function App() {
         <Sidenav toggleState={toggleState}/>
         <div className={`side-nav-underlay${open ? ' open': ''}`}></div>
         <div className="wrapper grid">
-          <main className="grid gap-lg">
+          <main className="grid gap-lg overflow-hidden">
             <TrendsGraph />
             <StatsCards />
             <Orders />

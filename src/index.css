@@ -244,6 +244,10 @@ textarea {
   justify-content: center;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .visually-hidden {
   clip: rect(10%);
   clip-path: inset(100%);
@@ -419,14 +423,12 @@ body.dark .main-container{
 .wrapper {
   order: 3;
   /* inline-size: 100%; */
-  container: wrapper / inline-size;
+  overflow-x: hidden;
 
   background-color: inherit;
 }
 .wrapper>main {
   padding: var(--space-lg);
-  overflow-y: hidden;
-  overflow-x: scroll;
   background-color: var(--clr-neutral-bg) !important;
 }
 body.dark .wrapper > main{
