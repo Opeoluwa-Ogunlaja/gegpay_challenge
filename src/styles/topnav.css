@@ -95,6 +95,22 @@
   stroke: var(--clr-neutral-900);
 }
 
+.profile-dropdown{
+  position: relative;
+}
+
+.profile-container-content{
+  display: none;
+}
+
+.profile-container-content.open{
+  display: block;
+  position: absolute;
+  background-color: white;
+  margin-top: var(--space-xs);
+  padding: var(--space-md);
+}
+
 @media screen and (max-width: 625px) {
   .logo-on-small {
     display: inline;
