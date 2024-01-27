@@ -21,6 +21,7 @@ const sidenav_links = [
     to: "/",
     icon: CategoryIcon,
     title: "home",
+    active: true
   },
   {
     to: "/",
@@ -87,7 +88,7 @@ export const Sidenav = ({ toggleState }) => {
                 <li key={link.title}>
                   <a
                     href={link.to}
-                    className="px-xs flex items-center justify-center"
+                    className={`px-xs flex items-center sidenav-link justify-center${link.active ? ' active' : ''}`}
                   >
                     {<Icon iconelement={link.icon} className="sidenav-icon" />}
                     <span className="visually-hidden">{link.title}</span>

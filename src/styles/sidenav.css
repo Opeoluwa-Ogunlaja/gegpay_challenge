@@ -102,6 +102,23 @@ body.dark .sidenav{
   transform: scaleX(-1) rotateZ(90deg);
 }
 
+.sidenav-link{
+  position: relative;
+}
+
+.sidenav-link.active::after{
+  position: absolute;
+  background-color: var(--clr-neutral-900);
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: -1.125rem;
+  width: .25rem;
+  transform: scaleY(.6);
+  transform-origin: center;
+  border-radius: var(--rounded-full);
+}
+
 @media screen and (max-width: 625px) {
   .sidenav {
     position: fixed;
