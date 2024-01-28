@@ -41,7 +41,11 @@ export const CalendarDropdown = () => {
       <div
         className={`calendar-container-content${dropdownOpen ? " open" : ""}`}
       >
-        <Calendar onChange={onChange} />
+        <Calendar 
+            className='grid gap-md justify-center text-md'
+            tileClassName={'calendar-tile p-xs font-medium w-max'}
+            onChange={onChange}
+         />
       </div>
     </div>
   );

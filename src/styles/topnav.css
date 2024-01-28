@@ -65,13 +65,7 @@
   border: 1px solid var(--clr-neutral-150);
   border-radius: 12px;
 }
-/* .calendar-dropdown{
-  position: absolute;
-  padding: 12px;
-  right: 0;
-  top: 40px;
-  
-} */
+
 .calendar_and_notification>.topnav_notification {
   height: 40px;
   width: 40px;
@@ -79,10 +73,6 @@
   border-radius: 100%;
   transition: all .3s;
 }
-
-/* .topnav_calender:hover, .topnav_notification:hover{
-    background-color: white;
-  } */
 
 .topnav_right .profile_menu>.profile_container {
   gap: var(--space-sm);
@@ -101,9 +91,6 @@
 }
 
 .topnav svg {
-  /* fill: white !important; */
-  width: 16px;
-  height: 16px;
   padding: 0;
   stroke: white;
 }
@@ -156,6 +143,11 @@
   .topnav-right,
   .calendar_and_notification {
     gap: var(--space-xxs)
+  }
+
+  .topnav svg {
+    width: 20px;
+    height: 20px;
   }
 
   .caret-down svg {

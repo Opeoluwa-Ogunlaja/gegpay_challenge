@@ -271,6 +271,13 @@ textarea {
   pointer-events: none;
 }
 
+.w-max{
+  width: max-content;
+}
+
+.p-xs{
+  padding: var(--space-xs);
+}
 .px-xs {
   padding: var(--space-xs);
 }

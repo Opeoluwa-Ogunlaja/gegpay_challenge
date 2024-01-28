@@ -33,6 +33,7 @@ export const ProfileDropdown = () => {
           <Icon
             iconelement={ProfileIcon}
             style={{ borderRadius: "inherit" }}
+            className={'profile-icon'}
             alt="User Profile"
           />
           <div className="name_and_email flex flex-column hide-on-small">
