@@ -36,16 +36,16 @@ export const CalendarDropdown = () => {
     <div className="calendar-dropdown" ref={dropdownRef}>
       <div className="topnav_calender flex items-center cursor-pointer" onClick={toggleDropdownOpen}>
         <Icon iconelement={CalenderIcon} alt="Calender_icon" />
-        <p className="text-md font-medium hide-on-small">{months[dateValue.getMonth()]} {dateValue.getDate()}, {' '} {dateValue.getFullYear()} </p>
+        <p className="calendarValue text-md font-medium hide-on-small">{months[dateValue.getMonth()]} {dateValue.getDate()}, {' '} {dateValue.getFullYear()} </p>
       </div>
-      <div
-        className={`calendar-container-content${dropdownOpen ? " open" : ""}`}
-      >
-        <Calendar 
-            className='grid gap-md justify-center text-md'
-            tileClassName={'calendar-tile p-xs font-medium w-max'}
-            onChange={onChange}
-         />
+      <div className={`Sample__container calendar-container-content${dropdownOpen ? " open" : ""}`}>
+        <div className={`Sample__container__content`}>
+          <Calendar 
+              // className=' grid gap-md justify-center text-md'
+              // tileClassName={'calendar-tile p-xs font-medium w-max'}
+              onChange={onChange}
+          />
+        </div>
       </div>
     </div>
   );

@@ -49,7 +49,7 @@ export const ProfileDropdown = () => {
           </div>
         </div>
         <div className={`profile-container-content${dropdownOpen ? ' open' : ''}`}>
-            <ul className="flex flex-column gap-lg" style={{ alignItems: 'left' }}>
+            <ul className="flex flex-column gap-lg px-lg" style={{ alignItems: 'left' }}>
                 {dropdownLinks.map((link, i) => {
                     return <li key={link.title + i}>
                         <a href="/" className="font-medium text-md">{ link.title }</a>

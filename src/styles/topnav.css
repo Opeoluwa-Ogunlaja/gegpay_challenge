@@ -98,34 +98,102 @@
 .profile-dropdown, .calendar-dropdown{
   position: relative;
 }
+.calendarValue{
+  color: var(--clr-neutral-900);
+}
 
 .profile-container-content, .calendar-container-content{
-  display: block;
-  visibility: hidden;
+  display: none;
   position: absolute;
   translate: -0.125rem 0;
   opacity: 0;
-  min-width:  100%;
+  width: 100%;
+  max-width: 100%;
+  min-width:  350px;
   transition: all .3s;
   right: 0;
 }
 
 .profile-container-content.open, .calendar-container-content.open{
-  visibility: visible;
+  display: block;
   opacity: 1;
   translate: 0;
   background-color: white;
   margin-top: var(--space-xs);
-  padding: var(--space-md);
-  padding-block: var(--space-sm);
   background-color: var(--clr-neutral-bg);
   border-radius: var(--rounded-lg);
   box-shadow: 1px 0 16px hsla(0, 0%, 64%, .2);
+  padding: 8px;
+  /* box-sizing: content-box; */
 }
 
 .profile-container-content a{
   color: var(--clr-neutral-900);
 }
+.Sample__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+  /* background-color: red !important; */
+}
+.Sample__container__content {
+  margin: 10px;
+  display: flex;
+}
+.Sample__container > * > *  {
+  /* margin: 10px; */
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+.Sample__container > * > * > :first-child{
+  /* background-color: gray; */
+  width: 100%;
+  display: flex;
+  gap: 1em;
+}
+.Sample__container > * > * > :first-child button{
+  padding: 10px 15px;
+  font-size: var(--text-sm);
+  color: var(--clr-neutral-900);
+}
+.Sample__container > * > * > :last-child{
+  /* background-color: gray; */
+  width: 100%;
+  display: flex; 
+}
+.Sample__container > * > * > :last-child > * button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
+  padding: 5px 8px;
+  transition: all .2s;
+  border-radius: 6px;
+  color: var(--clr-neutral-900);
+  font-size: var(--text-sm);
+
+  
+}
+.Sample__container > * > * > :last-child > * .react-calendar__month-view__weekdays__weekday{
+  color: var(--clr-neutral-300);
+  margin-bottom: 12px;
+  font-size: var(--text-sm);
+
+  /* background-color: gray; */
+}
+.Sample__container > * > * > :last-child > * button:focus{
+  background-color: var(--clr-primary);
+}
+.Sample__container__content .react-calendar {
+  margin: 0 auto;
+}
+
 
 @media screen and (max-width: 625px) {
   .logo-on-small {
@@ -152,5 +220,8 @@
 
   .caret-down svg {
     width: 16px;
+  }
+  .profile-container-content, .calendar-container-content{
+    right: -130px;
   }
 }
