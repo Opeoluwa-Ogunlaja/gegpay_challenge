@@ -54,25 +54,24 @@
   gap: var(--space-md)
 }
 
-.calendar_and_notification>.topnav_calender {
+.topnav_calender {
   gap: var(--space-xs);
   height: 40px;
-  padding-block: var(--space-sm);
-  padding-inline: var(--space-base);
+  padding: var(--space-sm);
   background-color: transparent;
   transition: all .3s;
   position: relative;
+  background-color: var(--clr-neutral-bg);
+  border: 1px solid var(--clr-neutral-150);
+  border-radius: 12px;
 }
-.calendar-dropdown{
+/* .calendar-dropdown{
   position: absolute;
   padding: 12px;
   right: 0;
   top: 40px;
-  background-color: var(--clr-neutral-bg);
-  border: 1px solid var(--clr-neutral-150);
-  /* color: var(--clr-neutral-900); */
-  border-radius: 12px;
-}
+  
+} */
 .calendar_and_notification>.topnav_notification {
   height: 40px;
   width: 40px;
@@ -105,11 +104,11 @@
   stroke: var(--clr-neutral-900);
 }
 
-.profile-dropdown{
+.profile-dropdown, .calendar-dropdown{
   position: relative;
 }
 
-.profile-container-content{
+.profile-container-content, .calendar-container-content{
   display: block;
   visibility: hidden;
   position: absolute;
@@ -120,7 +119,7 @@
   right: 0;
 }
 
-.profile-container-content.open{
+.profile-container-content.open, .calendar-container-content.open{
   visibility: visible;
   opacity: 1;
   translate: 0;
@@ -144,6 +143,10 @@
 
   .topnav .topnav_left p {
     font-size: var(--text-md);
+  }
+
+  .topnav_calender{
+    border-radius: var(--rounded-full);
   }
 
   .topnav-right,
