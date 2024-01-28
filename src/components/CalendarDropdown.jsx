@@ -34,7 +34,7 @@ export const CalendarDropdown = () => {
   };
   return (
     <div className="calendar-dropdown" ref={dropdownRef}>
-      <div className="topnav_calender flex items-center cursor" onClick={toggleDropdownOpen}>
+      <div className="topnav_calender flex items-center cursor-pointer" onClick={toggleDropdownOpen}>
         <Icon iconelement={CalenderIcon} alt="Calender_icon" />
         <p className="text-md font-medium">{months[dateValue.getMonth()]} {dateValue.getDate()}, {' '} {dateValue.getFullYear()} </p>
       </div>
