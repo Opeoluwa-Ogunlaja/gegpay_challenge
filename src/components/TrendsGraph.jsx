@@ -34,7 +34,7 @@ ChartJS.defaults.font = {
 import { Chart } from "react-chartjs-2";
 
 const points = [
-  5300, 11000, 7000, 28000, 8000, 45000, 9000, 24000, 33000, 4000, 30000, 26000,
+  5300, 20000, 4300, 28000, 10000, 45000, 12000, 24000, 33000, 5000, 30000, 26000,
 ];
 
 const createLinearGradient = (color1, color2) => {
@@ -146,7 +146,9 @@ export const TrendsGraph = () => {
           </select>
         </div>
       </div>
-      <Chart options={options} data={data} type={"bar"} style={{ width: '756px', height: '80%' }} />
+      <div style={{height:'100%'}}>
+        <Chart options={options} data={data} type={"bar"} style={{ width: '756px', height: '80%' }} />
+      </div>
     </section>
   );
 };

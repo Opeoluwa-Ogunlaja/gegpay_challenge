@@ -453,18 +453,19 @@ section.trends {
  grid-template-columns: 1fr;
  place-content: center;
  width: auto;
- height: 374px;
+ height: 400px;
  box-sizing: border-box;
  background-color: var(--clr-white);
- /* border-inline: var(--space-lg) solid var(--clr-neutral-bg); */
  align-items: stretch;
 }
 body.dark section.trends {
   background-color: var(--clr-neutral-bg);
 }
 section.trends > *{
-  max-width: 100%;
-  max-height: 100%;
+  overflow: auto;
+  max-width: auto;
+  max-height: 100% !important;
+
 }
 
 
@@ -582,6 +583,9 @@ select{
   background-color: var(--clr-white);
   color: var(--clr-neutral-900);
   border: 1px solid var(--clr-neutral-150);
+}
+select:focus{
+  outline: none;
 }
 
 

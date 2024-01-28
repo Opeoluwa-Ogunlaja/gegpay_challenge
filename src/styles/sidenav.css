@@ -107,18 +107,18 @@ body.dark .sidenav{
 }
 
 .sidenav-link.active::after{
+  content: '';
   position: absolute;
   background-color: var(--clr-neutral-900);
-  content: '';
-  top: 0;
-  bottom: 0;
-  right: -1.125rem;
-  width: .25rem;
-  transform: scaleY(.6);
-  transform-origin: center;
-  border-radius: var(--rounded-full);
+  width: 5px;
+  border-radius: 8px 0 0 8px;
+  height: 30px;
+  right: -19px;
+  top: 8px;
 }
-
+body.dark .sidenav-link.active svg{
+  stroke: #ffffff;
+}
 @media screen and (max-width: 625px) {
   .sidenav {
     position: fixed;
